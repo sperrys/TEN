@@ -17,10 +17,10 @@ The scope of this project may also include developing an analytics platform with
 
 # Deploying React
 1. `cd react-boilerplate`
-2. `npm install`
-3. To check the tests work, run: `npm test`
-4. To build the application: `npm run build`
-5. To get a server going: `npm start`. You can go to http://localhost:3000 to see a local version of the website
+2. `npm run setup`
+3. `npm start`
+4. You can go to http://localhost:3000 to see a local version of the website
+5. To build the app: `npm run clean` and then `npm start`
 6. Quit with CTRL+C
 
 
