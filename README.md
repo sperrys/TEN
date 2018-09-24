@@ -9,29 +9,6 @@ This project entails creating a secure and scalable database holding all book en
 
 The scope of this project may also include developing an analytics platform with textbook selling stats to help Textbook Exchange leadership make decisions. Depending on how the main user interface progresses throughout the year, this feature will either be incorporated or nixed in the second semester.
 
-## Overview
-This project will be split up into three parts: API, Database, Frontend
-
-### API
-
-[Django] (https://www.djangoproject.com/) REST API for all textbook CRUD (create, read, update, delete) operations
-This will interact with the [PostreSQL] (https://www.postgresql.org/) database
-
-### Database
-
-[PostgreSQL](https://www.postgresql.org/) database. Stores all data. (For later: add link to admin interface)
-
-### Frontend
-
-[React](https://facebook.github.io/react/docs/hello-world.html) application
-
-#### Deploying React
-1. `cd frontend`
-2. `npm run build`
-3. `npm start`
-4. You can go to http://localhost:3000 to see a local version of the website
-6. Quit with CTRL+C
-
 ## Setting up Development Environment
 1. `cd <PATH TO DIRECTORY YOU WANT YOUR CODE TO BE IN>`
 2. `git clone https://github.com/JumboCode/TEN.git // this will create a directory
@@ -55,19 +32,47 @@ In the backend directory, you will need to run more commands:
 
 In the frontend directory, run: `yarn`
 
+## Architecture Overview
+This project will be split up into three parts: API, Database, Frontend
+
+### API
+
+[Django](https://www.djangoproject.com/) REST API for all textbook CRUD (create,
+    read, update, delete) operations. This will interact with the
+    [PostgreSQL](https://www.postgresql.org/) database
+
+### Database
+
+[PostgreSQL](https://www.postgresql.org/) database. Stores all data.
+(For later: add link to admin interface)
+
+### Frontend
+
+[React](https://facebook.github.io/react/docs/hello-world.html) application
+
+#### Deploying React
+1. `cd frontend`
+2. `npm run build`
+3. `npm start`
+4. You can go to http://localhost:3000 to see a local version of the website
+6. Quit with CTRL+C
+
 ## Developer Workflow
 
 When working on new features/bug fixes:
 - Make sure your local repository is the most current version: `git pull`
-- Work on a feature branch (put the issue number in the branch name): `git checkout -b <branch name>`
+- Work on a feature branch (put the issue number in the branch name): `git checkout -b <branch name>` (make sure you're in the master branch when you create a new branch so that it will copy the current state of master)
+- To change existing branches: `git checkout <branch name>`
 - When making changes, add/save the changes by doing: `git add .` which
 stashes all the things you've edited/added/removed
 - As you work on sizable chunks of the code, commit your work with clear messages: `git commit -m "Some message"`. If you already have changes relevant to the most previous commit, you can type `git commit --amend` to group the changes together
 - You can run `git status` to see what files have been added and whether you're up to date with the master branch
-- When you are ready for the branch to merge into master, create a [pull request] (https://help.github.com/articles/creating-a-pull-request/).
+- To see the difference between your branch and master, type: `git diff`. If you want to see the difference between your branch and another branch: `git diff <branch name>`.
+- To see a list of the current commits, both in your local branch and in the master branch: `git log`
+- When you are ready for the branch to merge into master, create a [pull request](https://help.github.com/articles/creating-a-pull-request/).
 - Have someone review your merge request, incorporate feedback
 - Reviewer approves with a comment on the merge request on github
-- Merge your [code] (https://help.github.com/articles/merging-a-pull-request/)
+- Merge your [code](https://help.github.com/articles/merging-a-pull-request/)
 - When the branch is merged into master, the tests will run and if they pass, it
   will automatically be deployed to the production server
 - Double check it's working in the production app
