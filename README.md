@@ -67,9 +67,9 @@ When working on new features/bug fixes:
 stashes all the things you've edited/added/removed
 - As you work on sizable chunks of the code, commit your work with clear messages: `git commit -m "Some message"`. If you already have changes relevant to the most previous commit, you can type `git commit --amend` to group the changes together
 - You can run `git status` to see what files have been added and whether you're up to date with the master branch
-- To see the difference between your branch and master, type: `git diff`. If you want to see the difference between your branch and another branch: `git diff <branch name>`.
+- To see the difference between your branch and master, type: `git diff master`
 - To see a list of the current commits, both in your local branch and in the master branch: `git log`
-- When you are ready for the branch to merge into master, create a [pull request](https://help.github.com/articles/creating-a-pull-request/). You can do this by going to the Github repo, clicking `New pull request` in the top left, and selecting/typing your branch name in the Compare dropdown (leave Base as master).
+- When you are ready for the branch to merge into master, create a [pull request](https://help.github.com/articles/creating-a-pull-request/). This will be a way we can review each others' code before pushing into master. You can do this by going to the Github repo, clicking `New pull request` in the top left, and selecting/typing your branch name in the Compare dropdown (leave Base as master). Then after filling out a title and description for the pull request, click Create pull request
 - Have someone review your merge request, incorporate feedback
 - Reviewer approves with a comment on the merge request on github
 - Merge your [code](https://help.github.com/articles/merging-a-pull-request/)
