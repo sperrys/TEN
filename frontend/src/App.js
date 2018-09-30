@@ -12,7 +12,7 @@ class App extends Component {
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-          Haha this is the TEN project
+          Haha this is the TEN project. Making a change in test-branch!
         </p>
       </div>
     );
