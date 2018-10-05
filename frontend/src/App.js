@@ -1,22 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+class NavigationBarItem extends Component {
+    render() {
+        return (
+            <div className="NavigationBarItemContainer" style={{float: this.props.float}}>
+                <a className="NavigationBarItemAnchor">
+                    <div className="NavigationBarItemText">{this.props.text}</div>
+                </a>
+            </div>
+        );
+    }
+}
+
+class NavigationBar extends Component {
+    render() {
+        return (
+            <div id="NavigationBarContainer">
+                <NavigationBarItem float="left" text="Textbook Exchange Network" />
+                <NavigationBarItem float="right" text="About" />
+                <NavigationBarItem float="right" text="Sell" />
+                <NavigationBarItem float="right" text="Browse" />
+            </div>
+        );
+    }
+}
+
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to the Textbook Exchange Network</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-          Haha this is the TEN project
-        </p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <NavigationBar />
+        );
+    }
 }
 
 export default App;
