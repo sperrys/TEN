@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class NameForm extends React.Component {
+class SellPage extends React.Component {
     constructor(props) {
 	super(props);
 	this.state = {name: 'Tony Monacle',
@@ -82,13 +82,6 @@ class NameForm extends React.Component {
 		<input name="venmoID" type="text" value={this.state.venmoID} onChange={this.handleChange} />
         </label>
         
-        
-        
-        
-        
-        
-        
-        
         <input type="submit" value="Submit" />
       </form>
 		);
@@ -96,6 +89,6 @@ class NameForm extends React.Component {
 }
 
 ReactDOM.render(
-		<NameForm />,
+		<SellPage />,
 		document.getElementById('root')
 		);
