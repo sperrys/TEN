@@ -2,15 +2,14 @@ class NameForm extends React.Component {
     constructor(props) {
 	super(props);
 	this.state = {name: 'Tony Monacle',
-		      isbn: 'eg. 9781234567890',
-		      classID: 'eg. 0022',
-		      textbookTitle: "eg. An Invitation to Spanish (student edition)",
-		      editionNumber: "eg. 9",
-		      price: "eg. 33 ",
-		      email: "eg. example@mail.com",
-		      phoneNumber: "eg. 123-456-7890",
-		      venmoID: "eg. @jumboKid22"
-                  
+		            isbn: 'eg. 9781234567890',
+		            classID: 'eg. 0022',
+		            textbookTitle: "eg. An Invitation to Spanish (student edition)",
+		            editionNumber: "eg. 9",
+		            price: "eg. 33 ",
+		            email: "eg. example@mail.com",
+		            phoneNumber: "eg. 123-456-7890",
+		            venmoID: "eg. @jumboKid22"            
 	};
 
 	this.handleChange = this.handleChange.bind(this);
@@ -18,12 +17,16 @@ class NameForm extends React.Component {
     }
 
     handleChange(event) {
-	this.setState({value: event.target.value});
+      const target = event.target;
+      const name   = target.name;
+      const value  = target.value;
+	  this.setState({name: value});
     }
+  
 
     handleSubmit(event) {
-	alert('A name was submitted: ' + this.state.value);
-	event.preventDefault();
+	    alert('A name was submitted: ' + this.state.name);
+	    event.preventDefault();
     }
 
     render() {
