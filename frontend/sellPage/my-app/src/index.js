@@ -36,7 +36,11 @@ class SellPage extends React.Component {
 
     render() {
 	return (
+
+       
+
 		<form onSubmit={this.handleSubmit}>
+        <p>Textbook Exchange Network Sell Page</p>
         <label>
 		Name:
 		<input name="name" type="text" value={this.state.name} onChange={this.handleChange} />
@@ -81,6 +85,13 @@ class SellPage extends React.Component {
 		Venmo ID:
 		<input name="venmoID" type="text" value={this.state.venmoID} onChange={this.handleChange} />
         </label>
+        
+        
+        
+        
+        
+        
+        
         
         <input type="submit" value="Submit" />
       </form>
