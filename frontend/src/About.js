@@ -61,6 +61,8 @@ class App extends Component {
         return (
             <div>
                 <NavigationBar />
+                {/* Temporary padding below the navigation bar */}
+                <div style={{height: '600px'}}></div>
                 <div className="SectionWrapper" style={{backgroundColor: '#5F63BD'}}>
                     <div className="SectionTitle">The Problem</div>
                     <div className="SectionSubtitle">Texbooks are expensive.</div>
