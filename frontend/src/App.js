@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
+import NavigationBar from './NavigationBar.js'
 
 class StatisticCanvas extends Component {
 
@@ -50,31 +51,6 @@ class StatisticCanvas extends Component {
             <div className="StatisticCanvasContainer" style={{width: this.props.dimension}}>
                 <canvas className="StatisticCanvas"></canvas>
                 <div className="StatisticCanvasLabel">{this.props.label}</div>
-            </div>
-        );
-    }
-}
-
-class NavigationBarItem extends Component {
-    render() {
-        return (
-            <div className="NavigationBarItemContainer" style={{float: this.props.float}}>
-                <a className="NavigationBarItemAnchor">
-                    <div className="NavigationBarItemText">{this.props.text}</div>
-                </a>
-            </div>
-        );
-    }
-}
-
-class NavigationBar extends Component {
-    render() {
-        return (
-            <div id="NavigationBarContainer">
-                <NavigationBarItem float="left" text="Textbook Exchange Network" />
-                <NavigationBarItem float="right" text="About" />
-                <NavigationBarItem float="right" text="Sell" />
-                <NavigationBarItem float="right" text="Browse" />
             </div>
         );
     }
