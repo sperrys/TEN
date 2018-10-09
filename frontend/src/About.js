@@ -89,7 +89,7 @@ class App extends Component {
                 </div>
                 <div className="SectionWrapper" style={{backgroundColor: '#F5A23A'}}>
                     <div className="SectionTitle">Our Solution</div>
-                    <div className="SectionSubtitle">We're making textbooks more affordable.</div>
+                    <div className="SectionSubtitle">We&#8217;re making textbooks more affordable.</div>
                 </div>
             </div>
         );
