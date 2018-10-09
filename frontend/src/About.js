@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './Home.css';
+import './About.css';
 import NavigationBar from './NavigationBar.js'
 
 class StatisticCanvas extends Component {
@@ -61,8 +61,13 @@ class App extends Component {
         return (
             <div>
                 <NavigationBar />
-                {/* Temporary padding below the navigation bar */}
-                <div style={{height: '600px'}}></div>
+                <div className="SectionWrapper" style={{backgroundColor: '#fff'}}>
+                    <div className="SectionTitle" style={{color: '#000'}}>Textbook Exchange Network</div>
+                    <div className="SectionSubtitle" style={{color: '#000'}}>Changing the texbook game.</div>
+                    <div className="SectionContent" style={{color: 'rgba(0,0,0,.64)'}}>
+                        In ipsum ex, sollicitudin vitae ultricies vitae, consectetur a enim. Praesent imperdiet ornare pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut venenatis pharetra sem, quis bibendum augue bibendum ut.
+                    </div>
+                </div>
                 <div className="SectionWrapper" style={{backgroundColor: '#5F63BD'}}>
                     <div className="SectionTitle">The Problem</div>
                     <div className="SectionSubtitle">Texbooks are expensive.</div>
@@ -86,10 +91,16 @@ class App extends Component {
                             label="of students who did not buy textbooks said they were concerned this would hurt their grade"
                         />
                     </div>
+                    <div className="SectionContent" style={{color: 'rgba(255,255,255,0.64)'}}>
+                        Maecenas consectetur sollicitudin est eu maximus. Bunc ac nulla leo. Duis dolor dui, feugiat hendrerit facilisis eget, congue nec risus. In ipsum ex, sollicitudin vitae ultricies vitae, consectetur a enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut venenatis pharetra sem, quis bibendum augue bibendum ut.
+                    </div>
                 </div>
                 <div className="SectionWrapper" style={{backgroundColor: '#F5A23A'}}>
                     <div className="SectionTitle">Our Solution</div>
                     <div className="SectionSubtitle">We&#8217;re making textbooks more affordable.</div>
+                    <div className="SectionContent" style={{color: 'rgba(255,255,255,0.64)'}}>
+                        Maecenas consectetur sollicitudin est eu maximus. Sed molestie euismod tellus, vel mollis dolor. Quisque a nibh nec risus iaculis scelerisque. Nunc ac nulla leo. Duis dolor dui, feugiat hendrerit facilisis eget, congue nec risus. In ipsum ex, sollicitudin vitae ultricies vitae, consectetur a enim. Praesent imperdiet ornare pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </div>
                 </div>
             </div>
         );

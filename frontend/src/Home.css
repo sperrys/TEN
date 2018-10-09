@@ -1,34 +1,3 @@
 body {
     background-color: #F7F7F7
 }
-
-.SectionWrapper {
-    background-color: #5F63BD;
-    padding: 30px 20px;
-}
-.SectionTitle {
-    text-align: center;
-    color: #fff;
-    font-size: 42px;
-    font-family: 'Roboto Slab', sans-serif;
-}
-.SectionSubtitle {
-    text-align: center;
-    color: #fff;
-    font-size: 22px;
-}
-.StatisticCanvasWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 20px 0;
-}
-.StatisticCanvasContainer {
-    padding: 0 5px;
-}
-.StatisticCanvas {
-}
-.StatisticCanvasLabel {
-    text-align: center;
-    color: #393C72;
-}
