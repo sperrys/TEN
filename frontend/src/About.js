@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './App.css';
+import './Home.css';
 import NavigationBar from './NavigationBar.js'
 
 class StatisticCanvas extends Component {
