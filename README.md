@@ -1,5 +1,5 @@
 # TEN
-JumboCode 2018-2019 project for Textbook Exchange Network,  led by Bianca Capretta.
+JumboCode 2018-2019 project for Textbook Exchange Network
 
 Students are less inclined to buy brand new textbooks at their school bookstores because of ridiculously high and rising prices; however, students still need textbooks to succeed in their classes. The Textbook Exchange Network (TEN) offers a solution to reduce the burden of textbook costs. The purpose of TEN is to create a cheaper on-campus alternative where students can buy and sell their used textbooks. Books are exchanged in person during open office hours run by volunteers. Students can sell books at any price they choose and students can browse the available book selection.
 
@@ -8,6 +8,19 @@ In the past, TEN has facilitated the exchange of $100,000 worth of textbooks, sa
 This project entails creating a secure and scalable database holding all book entries. Each book submission will require a book name, edition number, ISBN, associated class name, and selling price. The website will essentially host CRUD capabilities (create, read, update, delete). A user interface will be designed for students looking to buy and sell textbooks - capabilities to read and create book entries. A separate interface will be incorporated for admins (non-technical volunteers) to update and delete postings for management purposes.
 
 The scope of this project may also include developing an analytics platform with textbook selling stats to help Textbook Exchange leadership make decisions. Depending on how the main user interface progresses throughout the year, this feature will either be incorporated or nixed in the second semester.
+
+## Team members
+* Allen Zhou
+* Era Iyer
+* Ryan Biette (Designer)
+* Bianca Capretta (Project Lead)
+* Juliet Yue
+* Barry Eom
+* Radhika Joshi
+* Russ Gomez
+* Aidan Bauer
+* Jake Owen
+* Daniel Westrich
 
 ## Setting up Development Environment
 1. `cd <PATH TO DIRECTORY YOU WANT YOUR CODE TO BE IN>`
