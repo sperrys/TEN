@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './NavigationBar.css';
 
 class NavigationBarItem extends Component {
     render() {
@@ -15,7 +16,7 @@ class NavigationBarItem extends Component {
 class NavigationBar extends Component {
     render() {
         return (
-            <div id="NavigationBarContainer">
+            <div className="NavigationBarContainer">
                 <NavigationBarItem
                 	float="left"
                 	text="Textbook Exchange Network"

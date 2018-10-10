@@ -1,7 +1,7 @@
 
 .SectionWrapper {
     background-color: #5F63BD;
-    padding: 30px 20px;
+    padding: 70px 20px;
 }
 .SectionTitle {
     text-align: center;
@@ -13,6 +13,16 @@
     text-align: center;
     color: #fff;
     font-size: 22px;
+}
+.SectionContent {
+    text-align: left;
+    font-size: 18px;
+    padding: 40px 30px 0 30px;
+    line-height: 1.5;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 620px;
 }
 .StatisticCanvasWrapper {
     display: flex;
