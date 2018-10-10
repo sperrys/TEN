@@ -26,15 +26,26 @@ class SellPage extends React.Component {
     }
 
     handleChange(event) {
-			const labels = this.state.labelNames.slice();
-			
+
+			// Get the keys of the labelnames object
+			const labels = Object.entries(this.state.labelNames).slice(0).map(entry => entry[0])
+
       const target = event.target;
       const name   = target.name;
 			const value  = target.value;
+
+			console.log("name: " + name + ", value: " + value);
+			
 			
 			labels[name] = value;
+			console.log("new labels:")
+			console.log(labels);
 
-	    this.setState({labelNames: labels});
+			
+			this.setState({labelNames: labels});
+
+			console.log(this.state);
+
     }
   
     handleSubmit(event) {
@@ -50,7 +61,7 @@ class SellPage extends React.Component {
 			  name={name}
 			  type={type}
 			  value={value}
-			  onChange={() => this.handleChange()}
+			  onChange={(event) => this.handleChange(event)}
 			/>
 		  );
 	}
@@ -72,15 +83,15 @@ class SellPage extends React.Component {
 
 		return(
 		<>
-		{this.renderLabel("name", 		   "text",   this.state.labelNames.name)}
-		{this.renderLabel("isbn", 		   "text",   this.state.labelNames.isbn)}
-		{this.renderLabel("classID", 	   "text", 	 this.state.labelNames.classID)}
+		{this.renderLabel("name", 		     "text",   this.state.labelNames.name)}
+		{this.renderLabel("isbn", 		     "text",   this.state.labelNames.isbn)}
+		{this.renderLabel("classID", 	     "text", 	 this.state.labelNames.classID)}
 		{this.renderLabel("textbookTitle", "text",   this.state.labelNames.textbookTitle)}
 		{this.renderLabel("editionNumber", "number", this.state.labelNames.editionNumber)}
-		{this.renderLabel("price", 		   "number", this.state.labelNames.price)}
-		{this.renderLabel("email", 		   "text",   this.state.labelNames.email)}
+		{this.renderLabel("price", 		     "number", this.state.labelNames.price)}
+		{this.renderLabel("email", 		     "text",   this.state.labelNames.email)}
 		{this.renderLabel("phoneNumber",   "text",  this.state.labelNames.phoneNumber)}
-		{this.renderLabel("venmoID", 	   "text",    this.state.labelNames.venmoID)}
+		{this.renderLabel("venmoID", 	    "text",    this.state.labelNames.venmoID)}
 		</>
 		)       
 	}
@@ -100,16 +111,19 @@ class SellPage extends React.Component {
     }
 }
 
-class Label extends React.Component {
-	render() {
+function Label(props) {
+
 	  return (
 		<label className="label">
-			{this.props.name}
-			<input name={this.props.name} type={this.props.type} value={this.props.value} />
+			{props.name}
+			<input name={props.name} 
+					   type={props.type} 
+					   value={props.value} 
+					   onChange={props.onChange} />
 		</label>
 	  );
 	}
-  }  
+
 
 ReactDOM.render(
 		<SellPage />,
