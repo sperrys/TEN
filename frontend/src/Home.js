@@ -8,14 +8,14 @@ class App extends Component {
         return (
         	<div>
         		<NavigationBar />
-		      <div class="vertcenter">
-		          <h1 id= "title"> Tufts Textbook Exchange </h1>
-		          <div class="horizflex">
-		              <button><a href="browse.html">Browse</a></button>
-		              <button><a href="studentsell.html">Sell</a></button>      
-		          </div>
-		      </div>
-	      </div>
+		      	<div class="vertcenter">
+		        	<h1 id= "title"> Tufts Textbook Exchange </h1>
+		            <div class="horizflex">
+		                <button><a href="browse.html">Browse</a></button>
+		                <button><a href="studentsell.html">Sell</a></button>      
+		            </div>
+	  	        </div>
+	        </div>
         );
     }
 }
