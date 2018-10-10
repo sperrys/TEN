@@ -1,3 +1,4 @@
+
 body {
 	margin: 0;
 	padding: 0;
@@ -5,44 +6,51 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	background-color: #F7F7F7;
 }
-#NavigationBarContainer {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    box-sizing: border-box;
-    background-color: #3E8EDE;
-    color: #fff;
-    position: relative;
-    padding: 0 15px;
-    min-width: 520px;
-    margin-bottom: 0;
+
+main {
+	backgroundColor: #FFFFFF;
+
 }
-.NavigationBarItemContainer {
-    position: relative;
-    display: inline-block;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 0 0;
+
+h1 {
+	color: #FFFFFF;
+	font-size: : "48px";
+	font-family: : 'Open Sans';
+	font-weight: bold;
+
 }
-.NavigationBarItemText {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    box-sizing: border-box;
-    padding: 3px 15px;
-    border-radius: 3px;
-    color: #fff;
+
+h2 {
+	color: #FFFFFF;
+	font-size: "36px";
+	font-family: 'Open Sans';
 }
-.NavigationBarItemText:hover {
-    background-color: #fff;
-    color: #3E8EDE;
+
+h3 {
+	color: #FFFFFF;
+	font-size: "20px";
+	font-family: 'Open Sans';
 }
-.NavigationBarItemAnchor {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    text-decoration: none;
+
+p {
+	background-color: black;
+	color: white;
+	font-size: "18px";
+	font-family: 'Open Sans';
+	font-weight: "lighter";  
+
 }
+
+.navBar {
+	color: #000000;
+	opacity: .75;
+}
+
+.accentColor {
+	color: #4A90E2;
+}
+
+.accentColor2 {
+	color: #50E3C2;
+}
+		

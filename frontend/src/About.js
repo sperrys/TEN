@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './About.css';
-import NavigationBar from './NavigationBar.js'
+import NavigationBar from './NavigationBar.js';
+import Footer from './Footer.js'
 
 class StatisticCanvas extends Component {
 
@@ -102,6 +103,7 @@ class App extends Component {
                         Maecenas consectetur sollicitudin est eu maximus. Sed molestie euismod tellus, vel mollis dolor. Quisque a nibh nec risus iaculis scelerisque. Nunc ac nulla leo. Duis dolor dui, feugiat hendrerit facilisis eget, congue nec risus. In ipsum ex, sollicitudin vitae ultricies vitae, consectetur a enim. Praesent imperdiet ornare pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                     </div>
                 </div>
+                <Footer />
             </div>
         );
     }
