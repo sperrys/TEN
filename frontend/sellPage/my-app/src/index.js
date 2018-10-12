@@ -27,21 +27,21 @@ class SellPage extends React.Component {
 
     handleChange(event) {
 
-			// Get the keys of the labelnames object
-			const labels = Object.entries(this.state.labelNames).slice(0).map(entry => entry[0])
-
-      const target = event.target;
-      const name   = target.name;
+			// Parse the name and value of the object that was changed
+      		const target = event.target;
+      		const name   = target.name;
 			const value  = target.value;
 
 			console.log("name: " + name + ", value: " + value);
 			
-			
+			// TODO could make labels immutable
+			var labels = this.state.labelNames
+
 			labels[name] = value;
 			console.log("new labels:")
 			console.log(labels);
 
-			
+			// Update our state with the change
 			this.setState({labelNames: labels});
 
 			console.log(this.state);
@@ -111,18 +111,37 @@ class SellPage extends React.Component {
     }
 }
 
-function Label(props) {
+class Label extends React.Component {
 
+	constructor(props) {
+		super(props);
+
+		//this.handleChange = this.handleChange.bind(this);
+
+		this.state = {
+			value: ''
+		};
+	
+	}
+
+	handleChange(e) {
+		console.log(e.target.value);
+		this.setState({value: e.target.value});
+	}
+
+	render()
+	{
 	  return (
 		<label className="label">
-			{props.name}
-			<input name={props.name} 
-					   type={props.type} 
-					   value={props.value} 
-					   onChange={props.onChange} />
+			{this.props.name}
+			<input name={this.props.name} 
+					type={this.props.type}
+					onChange={this.props.onChange}  
+					   />
 		</label>
 	  );
 	}
+}
 
 
 ReactDOM.render(
