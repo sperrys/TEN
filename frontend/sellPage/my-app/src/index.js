@@ -9,9 +9,9 @@ class SellPage extends React.Component {
 	super(props);
 							
 	this.state = {labelNames: 
-		[{name: 'name',           value: '', type: "text",   placeholder: 'eg. Tony Monacle'},
-		 {name: 'isbn',           value: '', type: "number",   placeholder: 'eg. 9781234567890'},
-		 {name: 'classID',        value: '', type: "number", placeholder: 'eg. 0022'},
+		[{name: 'Name',           value: '', type: "text",   placeholder: 'eg. Tony Monacle'},
+		 {name: 'ISBN',           value: '', type: "number",   placeholder: 'eg. 9781234567890'},
+		 {name: 'Class ID',        value: '', type: "number", placeholder: 'eg. 0022'},
 		 {name: 'Textbook Title', value: '', type: "text",   placeholder: 'eg. An Invitation to Spanish (student edition)'},
 		 {name: 'Edition Number', value: '', type: "number", placeholder: 'eg. 9'},
 		 {name: 'Price', 		  value: '', type: "number", placeholder: 'eg. 33'},
