@@ -9,15 +9,15 @@ class SellPage extends React.Component {
 	super(props);
 							
 	this.state = {labelNames: 
-		[{name: 'name', value: '', placeholder: 'eg. Tony Monacle'},
-		 {name: 'isbn', value: '', placeholder: 'eg. 9781234567890'},
-		 {name: 'classID', value: '', placeholder: 'eg. 0022'},
-		 {name: 'Textbook Title', value: '', placeholder: 'eg. An Invitation to Spanish (student edition)'},
-		 {name: 'Edition Number', value: '', placeholder: 'eg. 9'},
-		 {name: 'Price', value: '', placeholder: 'eg. 33'},
-		 {name: 'Email', value: '', placeholder: 'eg. example@mail.com'},
-		 {name: 'Phone Number', value: '', placeholder: 'eg. 123-456-7890'},
-		 {name: 'Venmo ID', value: '', placeholder: 'eg. @jumboKid22'}]
+		[{name: 'name',           value: '', type: "text",   placeholder: 'eg. Tony Monacle'},
+		 {name: 'isbn',           value: '', type: "number",   placeholder: 'eg. 9781234567890'},
+		 {name: 'classID',        value: '', type: "number", placeholder: 'eg. 0022'},
+		 {name: 'Textbook Title', value: '', type: "text",   placeholder: 'eg. An Invitation to Spanish (student edition)'},
+		 {name: 'Edition Number', value: '', type: "number", placeholder: 'eg. 9'},
+		 {name: 'Price', 		  value: '', type: "number", placeholder: 'eg. 33'},
+		 {name: 'Email', 		  value: '', type: "text",   placeholder: 'eg. example@mail.com'},
+		 {name: 'Phone Number',   value: '', type: "text",   placeholder: 'eg. 123-456-7890'},
+		 {name: 'Venmo ID', 	  value: '', type: "text",   placeholder: 'eg. @jumboKid22'}]
 	};
 
 
@@ -37,6 +37,7 @@ class SellPage extends React.Component {
 			// TODO could make labels immutable
 			var labels = this.state.labelNames;
 
+			// Find the label with the given name, and update its value
 			for (var i = 0; i < labels.length; i++)
 			{
 				var label = labels[i];
@@ -61,10 +62,8 @@ class SellPage extends React.Component {
   
     handleSubmit(event) {
 		
-
 		const labelNames = this.state.labelNames;
-		//const labelKeys = Object.getOwnPropertyNames(labelNames);
-
+		
 		var submitArray = [];
 
 		for (var i = 0; i < labelNames.length; i++) 
@@ -77,7 +76,6 @@ class SellPage extends React.Component {
 		}
 
 		window.alert("Your book has been submitted");
-		//window.alert(submitArray);
 		console.log(submitArray);
 
 	    event.preventDefault();
@@ -98,38 +96,14 @@ class SellPage extends React.Component {
 
 	_renderLabels() {
 
-		/*const labelNames = this.state.labelNames;
-		const labelKeys = Object.getOwnPropertyNames(labelNames);
-
-		var components = [];
-		const Test = ({labelKeys}) => (
-			<>
-				{labelKeys.map(label => (
-					this.renderLabel(labelKeys[label], "text", label)
-				))}
-			</>
-		); 
-		console.log(Test);*/
-
-
-
+		// Map each label object to a label component using renderLabel()
 		return(
 			<div>
 				{this.state.labelNames.map((label, index) =>
-				(this.renderLabel(label.name, "text", label.value, label.placeholder)))
+				(this.renderLabel(label.name, label.type, label.value, label.placeholder)))
 				}
 			</div>
-		/*<>
-		{this.renderLabel("name", 		     "text",   "", this.state.labelNames.name)}
-		{this.renderLabel("isbn", 		     "text",   "", this.state.labelNames.isbn)}
-		{this.renderLabel("classID", 	     "text",   "", this.state.labelNames.classID)}
-		{this.renderLabel("textbookTitle",   "text",   "", this.state.labelNames.textbookTitle)}
-		{this.renderLabel("editionNumber",   "number", "", this.state.labelNames.editionNumber)}
-		{this.renderLabel("price", 		     "number", "", this.state.labelNames.price)}
-		{this.renderLabel("email", 		     "text",   "", this.state.labelNames.email)}
-		{this.renderLabel("phoneNumber",     "text",   "", this.state.labelNames.phoneNumber)}
-		{this.renderLabel("venmoID", 	     "text",   "", this.state.labelNames.venmoID)}
-		</>*/
+
 		)       
 	}
 
