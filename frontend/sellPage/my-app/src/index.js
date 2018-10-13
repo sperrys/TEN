@@ -49,7 +49,32 @@ class SellPage extends React.Component {
     }
   
     handleSubmit(event) {
-		alert('A name was submitted: ' + this.state.name);
+		
+
+		const labelNames = this.state.labelNames;
+		const labelKeys = Object.getOwnPropertyNames(labelNames);
+
+		//console.log("label keys");
+		//console.log(labelKeys);
+		
+
+		var submitArray = [];
+
+		for (var i = 0; i < labelKeys.length; i++) 
+		{
+			var labelKey = labelKeys[i];
+
+			//console.log("label key" );
+			//console.log(labelKey);
+			var labelObject = {};
+			labelObject[labelKey] = labelNames[labelKey];
+			//console.log(labelObject);
+			submitArray.push(labelObject);
+		}
+
+		window.alert("Your book has been submitted");
+		//window.alert(submitArray);
+		console.log(submitArray);
 
 	    event.preventDefault();
 	}
@@ -137,6 +162,7 @@ class Label extends React.Component {
 			<input name={this.props.name} 
 					type={this.props.type}
 					onChange={this.props.onChange}  
+					value={this.props.value}
 					   />
 		</label>
 	  );
