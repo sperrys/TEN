@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
 import './Home.css';
-import NavigationBar from './NavigationBar.js'
+import NavigationBar from './Components/Navigationbar/NavigationBar.js'
 
 class App extends Component {
     render() {
@@ -12,7 +12,7 @@ class App extends Component {
 		        	<h1 id= "title"> Tufts Textbook Exchange </h1>
 		            <div class="horizflex">
 		                <button><a href="browse.html">Browse</a></button>
-		                <button><a href="studentsell.html">Sell</a></button>      
+		                <button><a href="studentsell.html">Sell</a></button>
 		            </div>
 	  	        </div>
 	        </div>
