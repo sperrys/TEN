@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './About.css';
-import NavigationBar from './NavigationBar.js';
-import Footer from './Footer.js'
+import NavigationBar from '../NavigationBar/NavigationBar.js';
+import Footer from '../Footer/Footer.js'
 
 class StatisticCanvas extends Component {
 

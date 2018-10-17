@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
 import './Home.css';
-import NavigationBar from './NavigationBar.js'
+import NavigationBar from '../NavigationBar/NavigationBar.js'
 import Footer from './Footer.js'
 
 class Button extends Component {
@@ -26,11 +26,11 @@ class App extends Component {
                         Textbook Exchange Network
                     </div>
                     <div className="HomeSubtitle">
-                        Looking to buy a textbook that isn't ridiculously expensive?
+                        Looking to buy a textbook that isnt ridiculously expensive?
                         Want to sell a textbook that you no longer need?
                     </div>
                     <div className="HomeAffirmation">
-                        We're here for you.
+                        Were here for you.
                     </div>
                     <div className="ButtonContainer">
                         <Button
