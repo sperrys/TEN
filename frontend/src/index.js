@@ -8,17 +8,12 @@ import registerServiceWorker from './registerServiceWorker';
 import { Route } from 'react-router-dom'
 
 ReactDOM.render(
-	<main>
+	<div className="BodyWrapper">
 	    <Router>
 	      <Route exact path='/' component={Home}/>
 	    </Router>
 	    <Router>
 	      <Route exact path='/about' component={About}/>
 	    </Router>
-		{/*
-		<Router>
-	      <Route exact path='/nav' component={NavigationBar}/>
-	    </Router>
-	    */}
-    </main>, document.getElementById('root'));
+    </div>, document.getElementById('root'));
 registerServiceWorker();
