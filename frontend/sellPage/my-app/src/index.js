@@ -81,7 +81,7 @@ class SellPage extends React.Component {
 	    event.preventDefault();
 	}
 	
-	renderLabel(name, type, value, placeholder)
+	renderLabel(name, type, value, placeholder, key)
 	{
 		return (
 			<Label
@@ -90,6 +90,7 @@ class SellPage extends React.Component {
 			  value={value}
 			  onChange={(event) => this.handleChange(event)}
 			  placeholder={placeholder}
+			  key={key}
 			/>
 		  );
 	}
@@ -100,7 +101,7 @@ class SellPage extends React.Component {
 		return(
 			<div>
 				{this.state.labelNames.map((label, index) =>
-				(this.renderLabel(label.name, label.type, label.value, label.placeholder)))
+				(this.renderLabel(label.name, label.type, label.value, label.placeholder, label.name)))
 				}
 			</div>
 
