@@ -168,7 +168,8 @@ class Label extends React.Component {
 	  return (
 		<label className="label">
 			{this.props.name}
-			<input  name=       {this.props.name} 
+			<input  className="inputField"
+					name=       {this.props.name} 
 					type=       {this.props.type}
 					onChange=   {this.props.onChange}  
 					placeholder={this.props.placeholder}
