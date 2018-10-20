@@ -10,8 +10,9 @@ class SellPage extends React.Component {
 							
 	this.state = {labelNames: 
 		[{name: 'Name',           value: '', type: "text",   placeholder: 'eg. Tony Monacle'},
-		 {name: 'ISBN',           value: '', type: "number",   placeholder: 'eg. 9781234567890'},
-		 {name: 'Class ID',        value: '', type: "number", placeholder: 'eg. 0022'},
+		 {name: 'ISBN',           value: '', type: "number", placeholder: 'eg. 9781234567890'},
+		 {name: 'Subject', 		  value: '', type: "text",   placeholder: 'eg. SPN'},
+		 {name: 'Class ID',       value: '', type: "number", placeholder: 'eg. 0022'},
 		 {name: 'Textbook Title', value: '', type: "text",   placeholder: 'eg. An Invitation to Spanish (student edition)'},
 		 {name: 'Edition Number', value: '', type: "number", placeholder: 'eg. 9'},
 		 {name: 'Price', 		  value: '', type: "number", placeholder: 'eg. 33'},
@@ -81,6 +82,17 @@ class SellPage extends React.Component {
 	    event.preventDefault();
 	}
 	
+	getCourseList()
+	{
+		return(
+		<datalist id = "courses">
+			<option value = "AAST">Asian American Studies</option>
+			<option value = "ACL">All College</option>
+			<option value = "AFR">Africana Studies</option>
+		<option value = "AMER">American Studies</option>
+		</datalist>)
+	}
+
 	renderLabel(name, type, value, placeholder, key)
 	{
 		return (
