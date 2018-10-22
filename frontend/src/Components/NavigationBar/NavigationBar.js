@@ -35,7 +35,7 @@ class NavigationBar extends Component {
                 <NavigationBarItem
                 	float="right"
                 	text="Buy"
-                	link="/buy"
+                	link="/browse"
                 />
             </div>
         );
