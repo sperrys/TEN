@@ -16,8 +16,8 @@ class ten(models.Model):
     edition      = models.CharField(max_length=20)
     # Completed during buying process
     sold          = models.BooleanField()
-    paid          = models.BooleanField()
-    date_removed  = models.DateField(max_length=50)
+    paid          = models.PostiveIntegerField() #0 not paid, 1 is cash, 2 is venmo
+    date_sold     = models.DateField(max_length=50)
 
     #buyer/seller data, reference to user table for consistancy
     seller_id = models.ForeignKey('user', on_delete=models.PROTECT)
