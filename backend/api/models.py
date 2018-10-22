@@ -16,7 +16,7 @@ class ten(models.Model):
     edition      = models.CharField(max_length=20)
     # Completed during buying process
     sold          = models.BooleanField()
-    paid          = models.PostiveIntegerField() #0 not paid, 1 is cash, 2 is venmo
+    paid_type     = models.PostiveIntegerField() #0 not paid, 1 is cash, 2 is venmo
     date_sold     = models.DateField(max_length=50)
 
     #buyer/seller data, reference to user table for consistancy
