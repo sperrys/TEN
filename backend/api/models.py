@@ -20,8 +20,8 @@ class Textbook(models.Model):
     date_sold     = models.DateField(max_length=50)
 
     #buyer/seller data, reference to user table for consistancy
-    seller_id = models.ForeignKey('user', on_delete=models.PROTECT)
-    buyer_id = models.ForeignKey('user', on_delete=models.PROTECT)
+    #seller_id = models.ForeignKey('user', on_delete=models.PROTECT)
+    #buyer_id = models.ForeignKey('user', on_delete=models.PROTECT)
 
     def __str__(self):
         return self.post_id
