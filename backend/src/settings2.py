@@ -29,7 +29,7 @@ MIDDLEWARE = [
 'django.contrib.messages.middleware.MessageMiddleware',
 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-ROOT_URLCONF = 'src.urls'
+ROOT_URLCONF = 'api.urls'
 TEMPLATES = [
 {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
