@@ -17,4 +17,3 @@ class ListBookRaw(APIView):
         """
         pass
 
-class 
