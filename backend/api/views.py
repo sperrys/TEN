@@ -7,7 +7,7 @@ class ListBookRaw(APIView):
         """
         Return a list of all books.
         """
-        queryset = Sled.objects.all()
+        queryset = Textbook.objects.all()
         serializer = SellSerializer(queryset, many=True)
         return Response(serializer.data)
 
@@ -16,3 +16,5 @@ class ListBookRaw(APIView):
         How might a post request work?
         """
         pass
+
+class 

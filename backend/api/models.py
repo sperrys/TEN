@@ -2,7 +2,7 @@ from django.db import models
 
 # Two tables for scalability purposes
 # Textbook Table:
-class ten(models.Model):
+class Textbook(models.Model):
     # Filled during book posting
     post_id      = models.PostiveIntegerField()
     date_added   = models.DateField(max_length=50)
@@ -23,9 +23,12 @@ class ten(models.Model):
     seller_id = models.ForeignKey('user', on_delete=models.PROTECT)
     buyer_id = models.ForeignKey('user', on_delete=models.PROTECT)
 
-    def is_valid(self):
-        if not present:
-            #compare time
+    def __str__(self):
+        return self.post_id
+
+    # def is_valid(self):
+    #     if not present:
+    #         compare time
 
 # User Table:
 class user(models.Model):
