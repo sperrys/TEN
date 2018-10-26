@@ -1,14 +1,13 @@
-
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
+import './Sell.css';
+import NavigationBar from '../NavigationBar/NavigationBar.js';
+import Footer from '../Footer/Footer.js';
 
 class SellPage extends React.Component {
     constructor(props) {
 	super(props);
-							
-	this.state = {labelNames: 
+
+	this.state = {labelNames:
 		[{name: 'Name',           value: '', type: "text",   placeholder: 'eg. Tony Monacle', 								list: null},
 		 {name: 'ISBN',           value: '', type: "number", placeholder: 'eg. 9781234567890', 								list: null},
 		 {name: 'Subject', 		  value: '', type: "text",   placeholder: 'eg. SPN', 										list: "courses"},
@@ -34,7 +33,7 @@ class SellPage extends React.Component {
 			const value  = target.value;
 
 			console.log("name: " + name + ", value: " + value);
-			
+
 			// TODO could make labels immutable
 			var labels = this.state.labelNames;
 
@@ -60,14 +59,14 @@ class SellPage extends React.Component {
 			console.log(this.state);
 
     }
-  
+
     handleSubmit(event) {
-		
+
 		const labelNames = this.state.labelNames;
-		
+
 		var submitArray = [];
 
-		for (var i = 0; i < labelNames.length; i++) 
+		for (var i = 0; i < labelNames.length; i++)
 		{
 			var label = labelNames[i];
 
@@ -81,7 +80,7 @@ class SellPage extends React.Component {
 
 	    event.preventDefault();
 	}
-	
+
 	getCourseList()
 	{
 		return(
@@ -118,35 +117,22 @@ class SellPage extends React.Component {
 				}
 			</div>
 
-		)       
+		)
 	}
 
     render() {
-
-	
-	return (
-
-		
-
-		<form onSubmit={this.handleSubmit}>
-        <p>Textbook Exchange Network Sell Page</p>
-
+        return (
+            <form onSubmit={this.handleSubmit}>
+            <p>Textbook Exchange Network Sell Page</p>
 				{this._renderLabels()}
-
 				{this.getCourseList()}
-		
-        <input type="submit" value="Submit" />
-
-		
-
-      </form>
-	  
+            <input type="submit" value="Submit" />
+            </form>
 		);
     }
 }
 
 class Label extends React.Component {
-
 	constructor(props) {
 		super(props);
 
@@ -155,7 +141,6 @@ class Label extends React.Component {
 		this.state = {
 			value: ''
 		};
-	
 	}
 
 	handleChange(e) {
@@ -169,21 +154,31 @@ class Label extends React.Component {
 		<label className="label">
 			{this.props.name}
 			<input  className="inputField"
-					name=       {this.props.name} 
+					name=       {this.props.name}
 					type=       {this.props.type}
-					onChange=   {this.props.onChange}  
+					onChange=   {this.props.onChange}
 					placeholder={this.props.placeholder}
 					value=      {this.props.value}
 					list= 		{this.props.list}
-					
+
 					   />
 		</label>
 	  );
 	}
 }
 
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <div className="StudentSellPage">
+                    <NavigationBar />
+                    <SellPage />
+                </div>
+                <Footer position="fixed"/>
+            </div>
+        );
+    }
+}
 
-ReactDOM.render(
-		<SellPage />,
-		document.getElementById('root')
-		);
+export default App;
