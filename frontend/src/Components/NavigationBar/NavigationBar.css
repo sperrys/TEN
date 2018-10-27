@@ -1,7 +1,8 @@
+
 body {
-    background-color: #F7F7F7
+    margin-top: 50px;
 }
-#NavigationBarContainer {
+.NavigationBarContainer {
     position: fixed;
     top: 0;
     width: 100%;
@@ -9,10 +10,11 @@ body {
     box-sizing: border-box;
     background-color: #3E8EDE;
     color: #fff;
-    position: relative;
     padding: 0 15px;
     min-width: 520px;
-    margin-bottom: 600px;
+    margin-bottom: 0;
+    border-bottom: 2px solid #2980b9;
+    z-index: 1000;
 }
 .NavigationBarItemContainer {
     position: relative;
@@ -28,6 +30,7 @@ body {
     box-sizing: border-box;
     padding: 3px 15px;
     border-radius: 3px;
+    color: #fff;
 }
 .NavigationBarItemText:hover {
     background-color: #fff;
@@ -39,35 +42,5 @@ body {
     width: 100%;
     height: 100%;
     cursor: pointer;
-}
-
-.SectionWrapper {
-    background-color: #5F63BD;
-    padding: 30px 20px;
-}
-.SectionTitle {
-    text-align: center;
-    color: #fff;
-    font-size: 42px;
-    font-family: 'Roboto Slab', sans-serif;
-}
-.SectionSubtitle {
-    text-align: center;
-    color: #fff;
-    font-size: 22px;
-}
-.StatisticCanvasWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 20px 0;
-}
-.StatisticCanvasContainer {
-    padding: 0 5px;
-}
-.StatisticCanvas {
-}
-.StatisticCanvasLabel {
-    text-align: center;
-    color: #393C72;
+    text-decoration: none;
 }
