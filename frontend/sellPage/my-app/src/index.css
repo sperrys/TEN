@@ -1,0 +1,19 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+label {
+  display:inline-block
+}
+
+.inputField[type=number]::-webkit-inner-spin-button,
+.inputField[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+
+
+}
