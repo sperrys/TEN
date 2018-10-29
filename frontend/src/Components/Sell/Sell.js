@@ -25,6 +25,8 @@ class SellPage extends React.Component {
 	this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // Function to be called when one of the input fields is updated
+	// Updates the state of the appropriate input field with the changed value
     handleChange(event) {
 
 			// Parse the name and value of the object that was changed
@@ -60,6 +62,9 @@ class SellPage extends React.Component {
 
     }
 
+    // Function to be called when the submit button is pressed
+	// Gathers the data found in the input fields into an array,
+	// and logs it to to the console
     handleSubmit(event) {
 
 		const labelNames = this.state.labelNames;
@@ -81,6 +86,9 @@ class SellPage extends React.Component {
 	    event.preventDefault();
 	}
 
+    // The list of courses that a book could be for
+	// Corresponds to the "subject" input field
+	// Should eventually be a database call, not hardcoded as it is here
 	getCourseList()
 	{
 		return(
@@ -92,6 +100,8 @@ class SellPage extends React.Component {
 		</datalist>)
 	}
 
+    // Render one of the input fields
+	// We use specific keys so react doesn't yell at us
 	renderLabel(name, type, value, placeholder, key, list)
 	{
 		return (
@@ -120,6 +130,8 @@ class SellPage extends React.Component {
 		)
 	}
 
+    // Render the Form for selling text book with each of the input fields (labels)
+	// and the list of courses used for the drop down menu
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
@@ -132,6 +144,7 @@ class SellPage extends React.Component {
     }
 }
 
+// Represents each input field in the form
 class Label extends React.Component {
 	constructor(props) {
 		super(props);
