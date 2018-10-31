@@ -4,6 +4,6 @@ from .models import *
 class SellSerializer(serializers.ModelSerializer):
 
 	class Meta:
-		model = textbook
-		fields = ('isbn','subject','class_id','title','edition','price')
 
+		model = Textbook
+		fields = ('post_id', 'isbn','subject','class_id','title','edition','price')

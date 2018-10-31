@@ -13,13 +13,17 @@ DEBUG = True
 ALLOWED_HOSTS = []
 # Application definition
 INSTALLED_APPS = [
+'api',
 'django.contrib.admin',
 'django.contrib.auth',
 'django.contrib.contenttypes',
 'django.contrib.sessions',
 'django.contrib.messages',
 'django.contrib.staticfiles',
+'django.contrib.sites'
 ]
+
+
 MIDDLEWARE = [
 'django.middleware.security.SecurityMiddleware',
 'django.contrib.sessions.middleware.SessionMiddleware',
@@ -29,7 +33,7 @@ MIDDLEWARE = [
 'django.contrib.messages.middleware.MessageMiddleware',
 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-ROOT_URLCONF = 'src.urls'
+ROOT_URLCONF = 'api.urls'
 TEMPLATES = [
 {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
