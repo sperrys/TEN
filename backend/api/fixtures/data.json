@@ -3,38 +3,14 @@
   "model": "api.Textbook",
   "pk": 1,
   "fields": {
-    "post_id"    : 1,
-    "date_added" : ,
-    "subject"    : "Comp",
-    "class_id"   : 11,
-    "price"      : 100,
-    "donate"     : ,
-    "present"    : ,
-    "isbn"       : ,
-    "title"      : ,
-    "edition"    : ,
-    "sold"       :,
-    "paid_type"  :,
-    "date_sold"  :,
+    "post_id"    : 1
   }
 },
 {
   "model": "api.Textbook",
   "pk": 2,
   "fields": {
-    "post_id"    : 2,
-    "date_added" : ,
-    "subject"    : ,
-    "class_id"   : ,
-    "price"      : ,
-    "donate"     : ,
-    "present"    : ,
-    "isbn"       :,
-    "title"      :,
-    "edition"    :,
-    "sold"       :,
-    "paid_type"  :,
-    "date_sold"  :,
+    "post_id"    : 2
   }
 }
 ]

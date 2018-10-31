@@ -5,4 +5,5 @@ class SellSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Textbook
-		fields = ('post_id', 'isbn','subject','class_id','title','edition','price')
+		fields = ('post_id')
+		# , 'isbn','subject','class_id','title','edition','price')
