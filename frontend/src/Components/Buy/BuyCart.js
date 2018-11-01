@@ -5,6 +5,29 @@ import NavigationBar from './../NavigationBar/NavigationBar.js';
 import proofimg from '../../assets/proof.png';
 
 
+class BuyCartItem extends Component {
+    render() {
+        return (
+        	<div>
+        					<hr class="hrblack"/>
+				<table>
+					<tr>
+						<td>{this.props.price}</td>
+						<td>TO</td>
+		  				<td>{this.props.venmo}</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>FOR</td>
+						<td>{this.props.title}</td>
+					</tr>
+				</table>
+
+			</div>
+        );
+    }
+}
+
 class BuyCart extends Component {
 
     render() {
@@ -16,19 +39,26 @@ class BuyCart extends Component {
         		</div>
                 <div class="horizflex">
 	            	<div class="vertflex border summary">
-			      		<h3 >Order Summary</h3>
-			      		<hr class="hrblack"/>
-			      		<h3 >Author</h3>
-			      		<h3 >Version</h3>
-			      		<h3 >Condition</h3>
-			      		<h3 >Textbook ID</h3>
+			      		<h3 id="order">Order Summary</h3>
+			      		<BuyCartItem 
+			      			price="$100"
+			      			venmo="@TuftsTextbookVENMO"
+                			title="Intro to Advanced Data Science"
+                		/>
+			      		<BuyCartItem 
+			      			price="$100"
+			      			venmo="@TuftsTextbookVENMO"
+                			title="Intro to Advanced Data Science"
+                		/>
+
 				    </div>
 				    <div class ="proof">
-				    	<div class ="vertflex">
+				    	<div class ="vertflex vertcenter">
 				    		<h1> Acceptable Venmo Proof </h1>
 							<img id="proofimg" src={proofimg}/>
+							<button id= "approve"><a href="BuyThanks">Approve Transaction</a></button>
 				    	</div>
-				    </div>           	
+				    </div>
                 </div>
 	        </div>
         );
