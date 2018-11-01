@@ -1,0 +1,44 @@
+.horizflex, .vertflex{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+.vertflex {
+    flex-direction: column;
+}
+.border {
+	border: solid;
+	border-radius: 15px;
+	width: 75%;
+	margin-left: 12.5%;
+	margin-right:12.5%;
+}
+.rightalign{
+	margin-left: auto;
+}
+h5{
+	margin-left: 3%;
+}
+.back{
+	margin-top: 1%;
+	margin-left: 5%;
+}
+a:link, a:visited, a:hover{
+	color:black;
+}
+#addtocartbutton:hover{
+    color:rgb(62, 142, 222);
+    background: rgba(139,69,19,.75);
+    /*box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 1px 50px 0 rgba(0, 0, 0, 0.19);*/
+}
+#addtocartbutton{
+	height:115px;
+	font-size:225%;
+    border-radius: 15px;
+	margin-top: 2%;
+	background-color: #4A90E2;
+}
+
+

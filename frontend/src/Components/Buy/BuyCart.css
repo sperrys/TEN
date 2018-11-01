@@ -1,0 +1,19 @@
+.rightalign{
+	margin-left: auto;
+}
+.back{
+	margin-top: 1%;
+	margin-left: 5%;
+}
+.hrblack{
+	border: 1px solid black;
+	width: 99%;
+}
+.summary{
+	margin-top: 5%;
+	width:60%;
+	height:50%;
+}
+#proofimg{
+	width: 70%;
+}
