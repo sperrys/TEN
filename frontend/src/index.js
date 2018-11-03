@@ -21,13 +21,10 @@ ReactDOM.render(
 	    <Router>
 	      <Route exact path='/about' component={About}/>
 	    </Router>
-<<<<<<< Updated upstream
 		<Router>
 	      <Route exact path='/sell' component={Sell}/>
-=======
 	    <Router>
 	      <Route exact path='/confirmation' component={confirmationPage}/>
->>>>>>> Stashed changes
 	    </Router>
     </div>, document.getElementById('root'));
 registerServiceWorker();
