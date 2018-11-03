@@ -5,15 +5,14 @@ import NavigationBar from './../NavigationBar/NavigationBar.js';
 import Footer        from './../Footer/Footer.js'
 //import searchicon from '../img/searchicon.png';
 
-//import Crap from './'
 
-class confirmationPage extends Component {
+class ConfirmationPage extends Component {
 
     render() {
         return (
         	<div>
         		<div class="back">
-        			<a href="confirmationPage">&#60; BACK</a>
+        			<a href="/sell">&#60; BACK</a>
         		</div>
         		<div class="vertflex">
 			      	<div class="border">
@@ -49,11 +48,10 @@ class App extends Component {
 			<div>
 				<div className="BodyWrapper">
 					<NavigationBar />
-					<div className="confirmationPage" style={{backgroundColor: '#fff'}}>
-						<confirmationPage
-                            />
+					<div className="ConfirmationPage" style={{backgroundColor: '#fff'}}>
+						<ConfirmationPage />
 			 		</div>
-                </div>
+               </div>
             <Footer position="relative" />
             </div>
         );
