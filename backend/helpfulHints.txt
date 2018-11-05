@@ -1,0 +1,50 @@
+# Helpful Hints from Spencer (and Russ)
+
+# Good Ideas for Setting Things Up
+1. Use Django Rest Framework Python Package For Our project
+    -We may be already doing this, but we were not sure
+
+2. Don't commit files that are used for the build, such as files located in venv, env, or __pycache__
+    -They're likely to create conflicts, and it's bad practice to include build or binary files
+
+3. Going along with the "don't commit build files" idea, each person should make their own virtual env for the project
+    -Each machine may install their requirements differently, and we don't want conflicts
+
+4. Helpful Commands Outside of the Virtual Env
+    -To create the virtual environment: 
+        "python3 -m venv <name of virtual environment>"
+    -To enter virtual environment:  
+        ". <name of venv>/bin/activate"
+
+5. Helpful Commands While Inside the Virtual Env
+    -To install requirements from the server while in the virtual environment:
+        "pip install -r requirements.txt"
+    -To run the server 
+        "python manage.py runserver"
+    -To make the migrations that will be applied to the server after making changes
+        "python manage.py makemigrations "
+    -To apply the migrations that were made using the makemigrations Commands
+        "python manage.py migrate"
+    -To dump data from the database and put it into a file called "datadump.json"
+        "python manage.py dumpdata --indent 2 > datadump.json"
+    
+# High Level Ideas That May Clear Things Up
+1. In the src/urls.py, we should add a line that includes the urls defined in our api folder
+    -src/urls.py is the high level root location for the project, but it's NOT neccessarily
+     where the urls for the client facing application should go
+    -This is a convention we should follow for Django to work correctly
+
+2. We should add a file called urls.py in the api folder, which will be 
+   where client-facing url paths will go 
+    -This is where we map certain urls to different views, and call .as_view() for different
+     classes defined in views.py 		
+
+3. Views.py is where much of the logic goes for serializing data from the models
+    -We define different classes with names like DonationsView, which serialize
+     data and make queryset
+    -Each class defined in views.py generally has a subclass, which determines
+     what methods and functions it inherits
+        -Pay attention to which subclasses we use, as this will give us different functionality
+         for different views 
+    -Then in urls.py, use DonationsView.as_view() to use that class for a given url
+
