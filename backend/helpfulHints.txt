@@ -8,6 +8,7 @@
     -They're likely to create conflicts, and it's bad practice to include build or binary files
 
 3. Going along with the "don't commit build files" idea, each person should make their own virtual env for the project
+    -Don't commit your virtual environment!
     -Each machine may install their requirements differently, and we don't want conflicts
 
 4. Helpful Commands Outside of the Virtual Env
