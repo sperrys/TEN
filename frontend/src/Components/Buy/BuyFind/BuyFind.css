@@ -21,7 +21,13 @@ input[type=text] {
     height:100%;
     width:80%;
 }
-
+.back{
+    margin-top: 1%;
+    margin-left: 5%;
+}
+a:link, a:visited, a:hover{
+    color:black;
+}
 #searchbutton{
     font-size: 13%;
     margin-left: 0%;

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
 import './BuyAddtoCart.css';
-import NavigationBar from './../NavigationBar/NavigationBar.js';
+import NavigationBar from './../../NavigationBar/NavigationBar.js';
 
-import searchicon from '../../assets/searchicon.png';
+import searchicon from '../../../assets/buy/searchicon.png';
 
 
 class BuyFind extends Component {
@@ -17,7 +17,7 @@ class BuyFind extends Component {
         		</div>
         		<div class="vertflex">
 			      	<div class="border">
-			      		<div class = "horizflex">
+			      		<div class = "horizflex item">
 					      	<div class="vertflex">
 					      		<h3 class="rightalign">Book Title</h3>
 					      		<h3 class="rightalign">Author</h3>

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
 import './BuyFind.css';
-import NavigationBar from './../NavigationBar/NavigationBar.js';
-import textbookdiagram from '../../assets/temp-textbook-diagram.jpg';
-import searchicon from '../../assets/searchicon.png';
+import NavigationBar from './../../NavigationBar/NavigationBar.js';
+import textbookdiagram from '../../../assets/buy/temp-textbook-diagram.jpg';
+import searchicon from '../../../assets/buy/searchicon.png';
 
 
 class BuyFind extends Component {

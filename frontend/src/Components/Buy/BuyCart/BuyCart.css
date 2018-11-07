@@ -10,9 +10,9 @@
 	    align-items: center !important;
 	    margin-left: -10%;
 }
-a {
+button > a {
    text-decoration: none; 
-   color:white !important;
+   color: white;
 }
 
 td{
@@ -32,6 +32,16 @@ td{
 	margin-top: 1%;
 	margin-left: 5%;
 }
+.cartborder {
+	border: solid;
+	border-radius: 15px;
+	width: 40%;
+	margin-left: 5%;
+	margin-right:10%;
+}
+a:link, a:visited, a:hover{
+	color:black;
+}
 .hrblack{
 	border: 1px solid black;
 	width: 99%;
@@ -41,7 +51,10 @@ td{
 	width:40%;
 	height:50%;
 }
-#proofimg{
+.venmo{
+	width:50%;
+}
+#proofimg {
 	width: 65%;
 }
 
