@@ -4,9 +4,9 @@ import './index.css';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Sell from './Components/Sell/Sell';
-import BuyFind from './Components/Buy/BuyFind';
-import BuyCart from './Components/Buy/BuyCart';
-import BuyAddtoCart from './Components/Buy/BuyAddtoCart';
+import BuyFind from './Components/Buy/BuyFind/BuyFind';
+import BuyCart from './Components/Buy/BuyCart/BuyCart';
+import BuyAddtoCart from './Components/Buy/BuyAddtoCart/BuyAddtoCart';
 import { BrowserRouter as Router } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import { Route } from 'react-router-dom'
