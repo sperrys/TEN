@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './About.css';
 import NavigationBar from '../NavigationBar/NavigationBar.js';
-import Footer from '../Footer/Footer.js'
+import Footer from '../Footer/Footer.js';
 
 class StatisticCanvas extends Component {
 

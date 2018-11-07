@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
 import './Home.css';
 import NavigationBar from '../NavigationBar/NavigationBar.js'
-import Footer from './Footer.js'
+import Footer from '../Footer/Footer.js'
 
 class Button extends Component {
     render() {
