@@ -1,3 +1,7 @@
+BACKEND README
+
+
+
 # Helpful Hints from Spencer (and Russ)
 
 # Good Ideas for Setting Things Up
@@ -49,3 +53,13 @@
          for different views 
     -Then in urls.py, use DonationsView.as_view() to use that class for a given url
 
+
+Spencer and I talked for a long time at the JumboCode meeting about Django, this commit reflects many of the changes we talked about.
+
+-We updated the .gitignore file to ignore files which shouldn't be included in our github repository, like pycache, venv, and env files or files included in those directories. These files should be ignored by git when adding files to future commits.
+
+-We physically removed the virtual environment directory from the project, and other build files. Each team member should have their own virtual environment, and not commit it or push it to our repository (it's a recipe for conflicts and bugs). When Spencer and I made a new virtual environment on my computer and ran the appropriate commands, things worked normally and we didn't encounter issues.
+
+-We talked at a high level and detailed level about how to set things up. I capture many of the important ideas in helpfulHints.txt, which should help us get some momentum again on the backend.
+
+Changes Post-Django Meeting with Spencer for branch "Feature/api_route"
