@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-//import ReactDOM from 'react-dom';
 import './BuyAddtoCart.css';
 import NavigationBar from './../../NavigationBar/NavigationBar.js';
-
-import searchicon from '../../../assets/buy/searchicon.png';
-
 
 class BuyFind extends Component {
 

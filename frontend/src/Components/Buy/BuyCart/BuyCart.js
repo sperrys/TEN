@@ -35,17 +35,17 @@ class BuyCart extends Component {
         	<div>
         		<NavigationBar />
         		<div class="back">
-        			<a href="BuyAddtoCart">&#60; BACK</a>
+        			<a href="/addtocart">&#60; BACK</a>
         		</div>
                 <div class="horizflex">
 	            	<div class="vertflex cartborder summary">
 			      		<h3 id="order">Order Summary</h3>
-			      		<BuyCartItem 
+			      		<BuyCartItem
 			      			price="$100"
 			      			venmo="@TuftsTextbookVENMO"
                 			title="Intro to Advanced Data Science"
                 		/>
-			      		<BuyCartItem 
+			      		<BuyCartItem
 			      			price="$100"
 			      			venmo="@TuftsTextbookVENMO"
                 			title="Intro to Advanced Data Science"
@@ -54,7 +54,7 @@ class BuyCart extends Component {
 				    <div class ="proof">
 				    	<div class ="vertflex vertcenter venmo">
 				    		<h1> Acceptable Venmo Proof </h1>
-							<img id="proofimg" src={proofimg}/>
+							<img id="proofimg" src={proofimg} alt="proof img"/>
 							<button id= "approve"><a href="BuyThanks">Approve Transaction</a></button>
 				    	</div>
 				    </div>
