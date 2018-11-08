@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './UserHome.css';
 import NavigationBar from '../../NavigationBar/NavigationBar.js';
-import browseorig from '../../../assets/img/browseorig.jpg';
-import sellorig from '../../../assets/img/sellorig.jpg';
+import browseorig from '../../../assets/browseorig.jpg';
+import sellorig from '../../../assets/sellorig.jpg';
 
 class App extends Component {
     render() {

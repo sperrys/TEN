@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import UserHome from './Components/UserHome/UserHome/UserHome';
-import AdminHome from './Components/AdminHome/AdminHome/AdminHome';
+import UserHome from './Components/Home/UserHome/UserHome';
+import AdminHome from './Components/Home/AdminHome/AdminHome';
 import About from './Components/About/About';
 import PreSell from './Components/Sell/Sell';
 import BuyFind from './Components/Buy/BuyFind/BuyFind';
@@ -30,10 +30,10 @@ ReactDOM.render(
 	      <Route exact path='/buy' component={BuyFind}/>
 	    </Router>
 	    <Router>
-	      <Route exact path='/buyAddtoCart' component={BuyAddtoCart}/>
+	      <Route exact path='/addtocart' component={BuyAddtoCart}/>
 	    </Router>
 		<Router>
-	      <Route exact path='/buyCart' component={BuyCart}/>
+	      <Route exact path='/cart' component={BuyCart}/>
 	    </Router>
 
     </div>, document.getElementById('root'));

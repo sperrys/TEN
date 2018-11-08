@@ -19,10 +19,10 @@ class BuyFind extends Component {
 			        	<form id = "searchID">
 			        		<input type="text" name="textbookID" placeholder = "Search..."/>
 			        	</form>
-			        	<button id= "searchbutton" type="submit"><img id="searchimage" src={searchicon}/></button>
+			        	<button id= "searchbutton" type="submit"><img id="searchimage" src={searchicon} alt="searchimg"/></button>
 			        </div>
 		        	<img id="textbookdiagram" src ={textbookdiagram} alt="textbook diagram"/>
-	  	        
+
 	  	        </div>
 	        </div>
         );
