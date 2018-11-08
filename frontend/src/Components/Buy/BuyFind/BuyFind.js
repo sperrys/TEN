@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import ReactDOM from 'react-dom';
 import './BuyFind.css';
 import NavigationBar from './../../NavigationBar/NavigationBar.js';
 import textbookdiagram from '../../../assets/buy/temp-textbook-diagram.jpg';

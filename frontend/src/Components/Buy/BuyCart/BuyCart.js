@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-//import ReactDOM from 'react-dom';
 import './BuyCart.css';
+import { BUY_ADD_CART_ROUTE } from "../../../index.js";
 import NavigationBar from './../../NavigationBar/NavigationBar.js';
 import proofimg from '../../../assets/buy/proof.png';
 
@@ -34,8 +34,9 @@ class BuyCart extends Component {
         return (
         	<div>
         		<NavigationBar />
+                {/* TODO: make this a button - currently make whole screen clickable*/}
         		<div class="back">
-        			<a href="/addtocart">&#60; BACK</a>
+        			<a href={"/" + BUY_ADD_CART_ROUTE}>&#60; BACK</a>
         		</div>
                 <div class="horizflex">
 	            	<div class="vertflex cartborder summary">
@@ -55,7 +56,7 @@ class BuyCart extends Component {
 				    	<div class ="vertflex vertcenter venmo">
 				    		<h1> Acceptable Venmo Proof </h1>
 							<img id="proofimg" src={proofimg} alt="proof img"/>
-							<button id= "approve"><a href="BuyThanks">Approve Transaction</a></button>
+							<button id= "approve">{/* TODO: Link to Buy Thanks page*/}Approve Transaction</button>
 				    	</div>
 				    </div>
                 </div>

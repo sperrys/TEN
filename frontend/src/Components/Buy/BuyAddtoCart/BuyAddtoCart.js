@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './BuyAddtoCart.css';
+import { BUY_CART_ROUTE, BUY_FIND_ROUTE } from '../../../index.js';
 import NavigationBar from './../../NavigationBar/NavigationBar.js';
 
 class BuyFind extends Component {
@@ -8,8 +9,9 @@ class BuyFind extends Component {
         return (
         	<div>
         		<NavigationBar />
+                {/* TODO: make this a button - currently make whole screen clickable*/}
         		<div class="back">
-        			<a href="buy">&#60; BACK</a>
+        			<a href={"/" + BUY_FIND_ROUTE}>&#60; BACK</a>
         		</div>
         		<div class="vertflex">
 			      	<div class="border">
@@ -31,7 +33,7 @@ class BuyFind extends Component {
 				        </div>
 		  	        </div>
 		  			<div class="horizflex">
-		  				<button id= "addtocartbutton"><a href="BuyCart">Add to Cart</a></button>
+		  				<button id= "addtocartbutton"><a href={"/" + BUY_CART_ROUTE}>Add to Cart</a></button>
 		  			</div>
 		  	    </div>
 	        </div>

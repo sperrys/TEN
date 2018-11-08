@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { PRESELL_ROUTE } from "../../../index.js";
 import './UserHome.css';
 import NavigationBar from '../../NavigationBar/NavigationBar.js';
+import Footer from '../../Footer/Footer.js';
 import browseorig from '../../../assets/browseorig.jpg';
 import sellorig from '../../../assets/sellorig.jpg';
 
@@ -19,20 +21,22 @@ class App extends Component {
             height: '100%'
         };
         return (
-        	<div>
-        		<NavigationBar />
-                <div className="horizflex">
-                    <div className = "split left" style={backgroundStyle}>
-                        <a href="/buy"/>
-                        <h1 className="title centered">Buy Books</h1>
-                    </div>
-                    <div className = "split right" style={sellStyle}>
-                        <a href="/presell"/>
-                        <h1 className="title centered">Sell Books</h1>
+            <div>
+                <div className="BodyWrapper">
+                    <NavigationBar />
+                    <div className="horizflex">
+                        <div className = "split left" style={backgroundStyle}>
+                            {/* TODO: add browse route here */}
+                            <h1 className="title centered">Browse Books</h1>
+                        </div>
+                        <div className = "split right" style={sellStyle}>
+                            <a href={"/" + PRESELL_ROUTE} />
+                            <h1 className="title centered">PreSell Books</h1>
+                        </div>
                     </div>
                 </div>
-
-	        </div>
+                <Footer position="fixed" />
+            </div>
         );
     }
 }

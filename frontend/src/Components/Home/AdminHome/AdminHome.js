@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../UserHome/UserHome.css';
+import { BUY_FIND_ROUTE } from "../../../index.js";
 import NavigationBar from '../../NavigationBar/NavigationBar.js';
 import browseorig from '../../../assets/browseorig.jpg';
 import sellorig from '../../../assets/sellorig.jpg';
@@ -20,14 +21,15 @@ class App extends Component {
         };
         return (
         	<div>
-        		<NavigationBar />
+        		<NavigationBar /> {/* TODO: make new nav bar for admins*/}
                 <div class="horizflex">
                     <div class = "split left" style={backgroundStyle}>
-                        <a href="/buy"/>
+                        <a href={"/" + BUY_FIND_ROUTE}/>
                         <h1 class="title centered">Buy Books</h1>
                     </div>
                     <div class = "split right" style={sellStyle}>
-                        <a href="/presell"/>
+                        {/* TODO: make this route to sell page for volunteers */}
+                        <a href="/"/>
                         <h1 class="title centered">Sell Books</h1>
                     </div>
                 </div>
