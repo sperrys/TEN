@@ -1,0 +1,75 @@
+.horizflex, .vertflex{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+}
+.vertcenter{
+	    align-items: center !important;
+	    margin-left: -10%;
+}
+button > a {
+   text-decoration: none; 
+   color: white;
+}
+
+td{
+	padding:25px;
+}
+#order{
+	margin-left: 5%;
+}
+.transactioninfo{
+	justify-content: space-around !important;
+}
+.vertflex {
+    flex-direction: column;
+}
+
+.back{
+	margin-top: 1%;
+	margin-left: 5%;
+}
+.cartborder {
+	border: solid;
+	border-radius: 15px;
+	width: 40%;
+	margin-left: 5%;
+	margin-right:10%;
+}
+a:link, a:visited, a:hover{
+	color:black;
+}
+.hrblack{
+	border: 1px solid black;
+	width: 99%;
+}
+.summary{
+	margin-top: 5%;
+	width:40%;
+	height:50%;
+}
+.venmo{
+	width:50%;
+}
+#proofimg {
+	width: 65%;
+}
+
+#approve:hover{
+    color:rgb(62, 142, 222);
+    background: rgba(139,69,19,.75);
+}
+#approve{
+	padding:3%;
+	width:75%;
+	font-size: 150%;
+    border-radius: 15px;
+	margin-top: 2%;
+	background-color: #4A90E2;
+
+}
+
+
