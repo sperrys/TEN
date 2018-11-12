@@ -25,6 +25,7 @@ class SellPage extends React.Component {
 	this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+
     // Function to be called when one of the input fields is updated
 	// Updates the state of the appropriate input field with the changed value
     handleChange(event) {
@@ -62,6 +63,7 @@ class SellPage extends React.Component {
 
     }
 
+
     // Function to be called when the submit button is pressed
 	// Gathers the data found in the input fields into an array,
 	// and logs it to to the console
@@ -85,8 +87,7 @@ class SellPage extends React.Component {
 
 	    event.preventDefault();
 	}
-
-    // The list of courses that a book could be for
+	// The list of courses that a book could be for
 	// Corresponds to the "subject" input field
 	// Should eventually be a database call, not hardcoded as it is here
 	getCourseList()
