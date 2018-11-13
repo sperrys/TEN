@@ -1,18 +1,14 @@
 from django.shortcuts import render
+from rest_framework import generics
+
+from .models import *
+
+from .serializers import *
+
 
 # Create views here!
-class ListBookRaw(APIView):
+class ListBookRaw(generics.ListCreateAPIView):
+    queryset = Textbook.objects.all()
+    serializer_class = SellSerializer
 
-    def get(self, request, format=None):
-        """
-        Return a list of all books.
-        """
-        queryset = Sled.objects.all()
-        serializer = SellSerializer(queryset, many=True)
-        return Response(serializer.data)
 
-    def post(self, request, format=None):
-        """
-        How might a post request work?
-        """
-        pass

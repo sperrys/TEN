@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { USER_HOME_ROUTE, ABOUT_ROUTE, PRESELL_ROUTE } from "../../index.js";
 import './NavigationBar.css';
 
 class NavigationBarItem extends Component {
@@ -20,22 +21,22 @@ class NavigationBar extends Component {
                 <NavigationBarItem
                 	float="left"
                 	text="Textbook Exchange Network"
-                	link="/"
+                    link={"/" + USER_HOME_ROUTE}
                 />
                 <NavigationBarItem
                 	float="right"
                 	text="About"
-                	link="/about"
+                    link={"/" + ABOUT_ROUTE}
                 />
                 <NavigationBarItem
                 	float="right"
-                	text="Sell"
-                	link="/sell"
+                    text="PreSell"
+                    link={"/" + PRESELL_ROUTE}
                 />
                 <NavigationBarItem
                 	float="right"
-                	text="Buy"
-                	link="/browse"
+                    text="Browse"
+                    /* TODO: add browse route here*/
                 />
             </div>
         );

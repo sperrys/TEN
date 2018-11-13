@@ -1,0 +1,52 @@
+.horizflex, .vertflex{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+.vertflex {
+    flex-direction: column;
+}
+input[type=text] {
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    height:48%;
+}
+#idTitle{
+    margin-right:3%;
+}
+#searchimage{
+    height:100%;
+    width:80%;
+}
+.back{
+    margin-top: 1%;
+    margin-left: 5%;
+}
+a:link, a:visited, a:hover{
+    color:black;
+}
+#searchbutton{
+    font-size: 13%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 2.15%;
+    width: 3.1%;
+    height: 3%;
+    background-color: lightgray;
+}
+
+#searchID{
+    margin-top: 2%;
+    line-height: 28px;
+}
+button:hover{
+    color:gray;
+    background: gray;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 1px 50px 0 rgba(0, 0, 0, 0.19);
+}
+#textbookdiagram{
+    margin-left: 20%;
+}
