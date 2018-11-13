@@ -4,18 +4,18 @@ import './AdminLogin.css';
 import NavigationBar from '../NavigationBar/NavigationBar.js';
 import Footer from '../Footer/Footer.js'
 
+
 class AdminLogin extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			email: " ",
 			password: " "
 		};
 	}
 
 	validateLogin() {
-		return this.state.email.length > 0 && this.state.password.length > 0;
+		return this.state.password.length > 0;
 	}
 
 	handleChange = event => {
@@ -28,12 +28,35 @@ class AdminLogin extends Component {
 		event.preventDefault();
 	}
 
+
+	render(){
+		return (
+			<div>
+			</div>
+		);
+
+	}
+
 }
 
-render() {
-	return 0;
-}
 
 class App extends Component{
-
+	render() {
+		return (
+			<div className="Login">
+					<center><p>Please login using the administrators password</p></center>
+					<center><p>If you have forgotten the password, please ask another administrator for the passcode</p></center>
+					<h1>Passcode:    
+						<input type="password" id="password" style={{width: 600, height: 50, fontSize: 40, borderRadius: 10}}
+						placeholder="Enter passcode here YUH"/> 
+					</h1>
+					<center><input style={{width: 300, height: 75, backgroundColor:'#4A90E3', fontSize: 40, color: 'white', borderRadius: 10}} 
+							type="submit" value="Submit"/>
+					</center>
+				<Footer position="fixed"/> 
+			</div>	
+		);
+	}
 }
+
+export default App;
