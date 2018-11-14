@@ -4,6 +4,15 @@ node_modules/
 # Webstorm
 .idea/
 
+# Virtual Environment Stuff
+.venv/
+venv/
+env/
+
+# Python Extras
+__pycache__/
+*.py[cod]
+
 # Project
 dist/
 

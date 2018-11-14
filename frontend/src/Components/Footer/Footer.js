@@ -21,7 +21,6 @@ class Footer extends Component {
                     <FooterItem
                         float='left'
                         text={'© Textbook Exchange Network ' + new Date().getFullYear()}
-                        link='/'
                     />
                     <FooterItem
                         float='right'

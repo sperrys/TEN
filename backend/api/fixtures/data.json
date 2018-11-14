@@ -1,0 +1,16 @@
+[
+{
+  "model": "api.Textbook",
+  "pk": 1,
+  "fields": {
+    "post_id"    : 1
+  }
+},
+{
+  "model": "api.Textbook",
+  "pk": 2,
+  "fields": {
+    "post_id"    : 2
+  }
+}
+]
