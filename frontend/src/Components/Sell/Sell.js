@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sell.css';
+import './sell.css';
 import NavigationBar from '../NavigationBar/NavigationBar.js';
 import Footer from '../Footer/Footer.js';
 

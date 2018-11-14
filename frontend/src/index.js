@@ -1,19 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-<<<<<<< HEAD
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import AdminLogin from './Components/AdminLogin/AdminLogin';
-import { BrowserRouter as Router } from 'react-router-dom';
-=======
->>>>>>> b5858d5d969503a0e4bfb9b437fe739676965b76
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import UserHome from './Components/Home/UserHome/UserHome';
 import AdminHome from './Components/Home/AdminHome/AdminHome';
-import About from './Components/About/About';
 import PreSell from './Components/Sell/Sell';
 import BuyFind from './Components/Buy/BuyFind/BuyFind';
 import BuyCart from './Components/Buy/BuyCart/BuyCart';
