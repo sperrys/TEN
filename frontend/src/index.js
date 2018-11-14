@@ -44,11 +44,10 @@ ReactDOM.render(
 		<Router>
 	      <Route exact path={"/" + PRESELL_ROUTE} component={PreSell}/>
 	    </Router>
-<<<<<<< HEAD
+
 	    <Router>
 	      <Route exact path={"/" + PRESELL_ROUTE} component={confirmationPage}/>
 	    </Router>
-=======
 		<Router>
 	      <Route exact path={"/" + BUY_FIND_ROUTE} component={BuyFind}/>
 	    </Router>
@@ -59,6 +58,5 @@ ReactDOM.render(
 	      <Route exact path={"/" + BUY_CART_ROUTE} component={BuyCart}/>
 	    </Router>
 
->>>>>>> b5858d5d969503a0e4bfb9b437fe739676965b76
     </div>, document.getElementById('root'));
 registerServiceWorker();
