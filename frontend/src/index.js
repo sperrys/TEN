@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-<<<<<<< HEAD
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Sell from './Components/Sell/Sell';
@@ -9,7 +8,6 @@ import confirmationPage from './Components/Sell/confirmationPage';
 import { BrowserRouter as Router } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import { Route } from 'react-router-dom' 
-=======
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -28,7 +26,6 @@ export const PRESELL_ROUTE = "presell";
 export const BUY_FIND_ROUTE = "buy";
 export const BUY_CART_ROUTE = "cart";
 export const BUY_ADD_CART_ROUTE = "addtocart";
->>>>>>> b5858d5d969503a0e4bfb9b437fe739676965b76
 
 ReactDOM.render(
 	<div className="BodyWrapper">
