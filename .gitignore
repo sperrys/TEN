@@ -8,6 +8,10 @@ node_modules/
 .venv/
 venv/
 env/
+.env/
+
+# Linux backups
+*~
 
 # Python Extras
 __pycache__/
