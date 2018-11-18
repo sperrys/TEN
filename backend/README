@@ -73,7 +73,12 @@ BACKEND README
     -To quit postgres 
         "\q"
 
-
+# Common Problems
+    -You have a column in your database that Django expects, but in your
+     data.json (or whatever file you're trying "loaddata" with), you 
+     have not listed that column/field
+        -Ex: "column "date_added" of relation "api_textbook" does not exist"
+        -Solution: add the field to data.json or delete column from the database 
 
 # Helpful Links 
     -Spencer Postgres Tutorial 
