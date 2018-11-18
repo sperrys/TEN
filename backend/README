@@ -57,6 +57,24 @@ BACKEND README
          for different views 
     -Then in urls.py, use DonationsView.as_view() to use that class for a given url
 
+# Postgresql Commands
+    -To open up postgres with a specific database
+        "psql <name of database>"
+    -To list all the tables in a given database (after accessing it through psql)
+        "\dt" 
+    -To open up general postgres database
+        "psql postgres"
+    -To list all the databases in postgres
+        "\l" (use a lower case L)
+    -To select all columns in a table named api_textbook
+        "select * from api_textbook;"
+    -To delete a column named "dated_added" in a table named "api_textbook"
+        "ALTER TABLE api_textbook DROP COLUMN date_added;"
+    -To quit postgres 
+        "\q"
+
+
+
 # Helpful Links 
     -Spencer Postgres Tutorial 
         https://github.com/JumboCode/django-postgres-tutorial?fbclid=IwAR2OYUCsvZQdscLrme6B8yCTYir_iiNHp4SA0UKhdaNvlTQyU15SWnZcu2Q
