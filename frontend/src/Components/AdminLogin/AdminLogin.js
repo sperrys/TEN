@@ -11,6 +11,8 @@ class AdminLogin extends Component {
 
 		this.state = {
 			password: " "
+			//redirect: false;
+
 		};
 	}
 
@@ -26,6 +28,12 @@ class AdminLogin extends Component {
 
 	handleSubmit = event => {
 		event.preventDefault();
+	}
+
+	checkPassword() {
+		//if(this.state.password.value == 'h'){
+			this.props.history.push(`http://google.com`);
+		//}
 	}
 
 
@@ -50,7 +58,7 @@ class App extends Component{
 						<input type="password" id="password" style={{width: 600, height: 50, fontSize: 40, borderRadius: 10}}
 						placeholder="Enter passcode here YUH"/> 
 					</h1>
-					<center><input style={{width: 300, height: 75, backgroundColor:'#4A90E3', fontSize: 40, color: 'white', borderRadius: 10}} 
+					<center><input type="button" onClick={this.checkPassword} style={{width: 300, height: 75, backgroundColor:'#4A90E3', fontSize: 40, color: 'white', borderRadius: 10}} 
 							type="submit" value="Submit"/>
 					</center>
 				<Footer position="fixed"/> 

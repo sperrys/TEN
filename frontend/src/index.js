@@ -21,6 +21,7 @@ export const PRESELL_ROUTE = "presell";
 export const BUY_FIND_ROUTE = "buy";
 export const BUY_CART_ROUTE = "cart";
 export const BUY_ADD_CART_ROUTE = "addtocart";
+export const VOLUNTEER_LOGIN = "adminlogin";
 
 ReactDOM.render(
 	<div className="BodyWrapper">
@@ -44,6 +45,9 @@ ReactDOM.render(
 	    </Router>
 		<Router>
 	      <Route exact path={"/" + BUY_CART_ROUTE} component={BuyCart}/>
+	    </Router>
+	    <Router>
+	    	<Route exact path={"/" + VOLUNTEER_LOGIN} component={AdminLogin}/>
 	    </Router>
 
     </div>, document.getElementById('root'));
