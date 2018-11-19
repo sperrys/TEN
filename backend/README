@@ -1,7 +1,5 @@
 BACKEND README
 
-
-
 # Helpful Hints from Spencer (and Russ)
 
 # Good Ideas for Setting Things Up
@@ -30,8 +28,14 @@ BACKEND README
         "python manage.py makemigrations "
     -To apply the migrations that were made using the makemigrations Commands
         "python manage.py migrate"
+
+    -To load dummy data into the database, 
+        "python manage.py loaddata data.json"
+            -data.json is the file whose data will be loaded into the database
     -To dump data from the database and put it into a file called "datadump.json"
         "python manage.py dumpdata --indent 2 > datadump.json"
+    -To flush all migrations
+        "python manage.py flush"
     
 # High Level Ideas That May Clear Things Up
 1. In the src/urls.py, we should add a line that includes the urls defined in our api folder
@@ -52,3 +56,32 @@ BACKEND README
         -Pay attention to which subclasses we use, as this will give us different functionality
          for different views 
     -Then in urls.py, use DonationsView.as_view() to use that class for a given url
+
+# Postgresql Commands
+    -To open up postgres with a specific database
+        "psql <name of database>"
+    -To list all the tables in a given database (after accessing it through psql)
+        "\dt" 
+    -To open up general postgres database
+        "psql postgres"
+    -To list all the databases in postgres
+        "\l" (use a lower case L)
+    -To select all columns in a table named api_textbook
+        "select * from api_textbook;"
+    -To delete a column named "dated_added" in a table named "api_textbook"
+        "ALTER TABLE api_textbook DROP COLUMN date_added;"
+    -To quit postgres 
+        "\q"
+
+# Common Problems
+    -You have a column in your database that Django expects, but in your
+     data.json (or whatever file you're trying "loaddata" with), you 
+     have not listed that column/field
+        -Ex: "column "date_added" of relation "api_textbook" does not exist"
+        -Solution: add the field to data.json or delete column from the database 
+
+# Helpful Links 
+    -Spencer Postgres Tutorial 
+        https://github.com/JumboCode/django-postgres-tutorial?fbclid=IwAR2OYUCsvZQdscLrme6B8yCTYir_iiNHp4SA0UKhdaNvlTQyU15SWnZcu2Q
+    -Spencer Django Tutorial 
+        https://github.com/JumboCode/django-tutorial
