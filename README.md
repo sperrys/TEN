@@ -72,20 +72,35 @@ This project will be split up into three parts: API, Database, Frontend
 
 ## Developer Workflow
 
-When working on new features/bug fixes:
-- Make sure your local repository is the most current version: `git pull`
-- Work on a feature branch (put the issue number in the branch name): `git checkout -b <branch name>` (make sure you're in the master branch when you create a new branch so that it will copy the current state of master)
-- To change existing branches: `git checkout <branch name>`
-- When making changes, add/save the changes by doing: `git add .` which
-stashes all the things you've edited/added/removed
-- As you work on sizable chunks of the code, commit your work with clear messages: `git commit -m "Some message"`. If you already have changes relevant to the most previous commit, you can type `git commit --amend` to group the changes together
+### Updating Repo
+**Make sure to consistently `git pull` to make sure the repos you're working on are up-to-date**
+1. To make sure your local repository is the most current version - on your local master branch: `git pull`
+2. If any conflicts, fix those, `git add [files]` and `git commit`.
+3. Now go to the current branch you're working on to add the most current code in the master branch: `git pull origin master`
+
+### Making a New Branch
+1. Checkout to the master branch: `git checkout master` and `git pull`
+2. Create a new branch: `git checkout -b <branch name>`
+
+### Navigating Branches
+1. To change existing branches: `git checkout <branch name>`
+
+### Making Changes to Branches
+1. Add the changes you've made on your local branch: `git add .` This command will stash all the things you've edited/added/removed
+2. As you work on sizable chunks of the code, commit your work with clear messages: `git commit -m "Some message"`. If you already have changes relevant to the most previous commit, you can type `git commit --amend` to group the changes together
+
+### Current State of Branch
 - You can run `git status` to see what files have been added and whether you're up to date with the master branch
 - To see the difference between your branch and master, type: `git diff master`
 - To see a list of the current commits, both in your local branch and in the master branch: `git log`
-- When you are ready for the branch to merge into master, create a [pull request](https://help.github.com/articles/creating-a-pull-request/). This will be a way we can review each others' code before pushing into master. You can do this by going to the Github repo, clicking `New pull request` in the top left, and selecting/typing your branch name in the Compare dropdown (leave Base as master). Then after filling out a title and description for the pull request, click Create pull request
-- Have someone review your merge request, incorporate feedback
-- Reviewer approves with a comment on the merge request on github
-- Merge your [code](https://help.github.com/articles/merging-a-pull-request/)
-- When the branch is merged into master, the tests will run and if they pass, it
-  will automatically be deployed to the production server
-- Double check it's working in the production app
+
+### Making a Pull Request (PR)
+1. Make sure you've added and committed all your changes
+2. Push all those to the remote branch: `git push` and then copy and paste the upstream command it hands you
+3. Go to Github.com and navigate to our repo. At the top, it should recognize that you've just pushed a branch remotely. There should be a nice green button on the right to immediately make a pull request.
+4. If not, then click `New pull request` in the top left. Select or type your branch name in the Compare dropdown (leave Base as master).
+5. Fill out a title, add a description with the changes/edits you made, and add at least two reviewers for the pull request.
+6. If anyone makes comments, fix them on your branch. Add, commit, and then push again. Bug that person to confirm that your changes addressed your comments.
+7. At the bottom of the PR, click squash and merge, or whatever green button appears to finish the pull request.
+
+If you're still lost, here's more on making a [pull request](https://help.github.com/articles/creating-a-pull-request/) and how to merge the [code](https://help.github.com/articles/merging-a-pull-request/).
