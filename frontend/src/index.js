@@ -6,6 +6,7 @@ import About from './Components/About/About';
 import AdminLogin from './Components/AdminLogin/AdminLogin';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import history from './history'; 
 
 import UserHome from './Components/Home/UserHome/UserHome';
 import AdminHome from './Components/Home/AdminHome/AdminHome';
@@ -25,30 +26,17 @@ export const VOLUNTEER_LOGIN = "adminlogin";
 
 ReactDOM.render(
 	<div className="BodyWrapper">
-	    <Router>
+		<Router history={history}>
+		<div>
 	      <Route exact path={"/" + USER_HOME_ROUTE} component={UserHome}/>
-	    </Router>
-		<Router>
 	      <Route exact path={"/" + ADMIN_HOME_ROUTE} component={AdminHome}/>
-	    </Router>
-	    <Router>
 	      <Route exact path={"/" + ABOUT_ROUTE} component={About}/>
-	    </Router>
-		<Router>
 	      <Route exact path={"/" + PRESELL_ROUTE} component={PreSell}/>
-	    </Router>
-		<Router>
 	      <Route exact path={"/" + BUY_FIND_ROUTE} component={BuyFind}/>
-	    </Router>
-	    <Router>
 	      <Route exact path={"/" + BUY_ADD_CART_ROUTE} component={BuyAddtoCart}/>
-	    </Router>
-		<Router>
 	      <Route exact path={"/" + BUY_CART_ROUTE} component={BuyCart}/>
+	      <Route exact path={"/" + VOLUNTEER_LOGIN} component={AdminLogin}/>
+	    </div>
 	    </Router>
-	    <Router>
-	    	<Route exact path={"/" + VOLUNTEER_LOGIN} component={AdminLogin}/>
-	    </Router>
-
-    </div>, document.getElementById('root'));
+    </div> ,document.getElementById('root'));
 registerServiceWorker();
