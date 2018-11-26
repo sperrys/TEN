@@ -1,7 +1,10 @@
 import React from 'react';
-import './Sell.css';
+import './sell.css';
 import NavigationBar from '../NavigationBar/NavigationBar.js';
 import Footer from '../Footer/Footer.js';
+import '../../index.js';
+import { Router, Route } from 'react-router-dom';
+import history from '../../history';
 
 class SellPage extends React.Component {
     constructor(props) {
@@ -82,11 +85,12 @@ class SellPage extends React.Component {
 			submitArray.push(labelObject);
 		}
 
-		window.alert("Your book has been submitted");
-		console.log(submitArray);
-
-	    event.preventDefault();
+		// window.alert("Your book has been submitted");
+		// console.log(submitArray);
+		
 	}
+
+
 	// The list of courses that a book could be for
 	// Corresponds to the "subject" input field
 	// Should eventually be a database call, not hardcoded as it is here
@@ -130,20 +134,34 @@ class SellPage extends React.Component {
 
 		)
 	}
-
     // Render the Form for selling text book with each of the input fields (labels)
 	// and the list of courses used for the drop down menu
+	// handleClick = () => {
+	// 	this.props.history.push('/confirmationPage');
+	// };
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-            <p>Textbook Exchange Network Sell Page</p>
-				{this._renderLabels()}
+        	<Router history = {history}>
+            <form>
+            <p>Textbook Exchange Network Sell Page</p>	
+           		{this._renderLabels()}
 				{this.getCourseList()}
-            <input type="submit" value="Submit" />
+				<button onClick = {this.handleClick} type = "button">
+					<Route path ={'/confirmationPage'}/>
+					<a href = "/confirmation"/>
+            	</button>
             </form>
+            </Router>
+             
+
 		);
+
+		// onSubmitSuccess: (result, dispatch, props)=>{
+		// 	return this.props.router.push('"/" + SELL_CONFIRMATION');
+
+		}
     }
-}
+
 
 // Represents each input field in the form
 class Label extends React.Component {
@@ -162,6 +180,13 @@ class Label extends React.Component {
 		this.setState({value: e.target.value});
 	}
 
+	submitForm(e){
+		e.preventDefault();
+		this.props.history.push({
+			pathname: '/confirmation',
+			data: 'yhello'
+		})
+	}
 	render()
 	{
 	  return (
@@ -182,6 +207,7 @@ class Label extends React.Component {
 }
 
 class App extends React.Component {
+
     render() {
         return (
             <div>
