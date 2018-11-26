@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ADMIN_HOME_ROUTE, ABOUT_ROUTE, BUY_FIND_ROUTE } from "../../index.js";
-import './NavigationBar.css';
+import '../NavigationBar.css';
 import ten from '../../assets/ten-logo.png';
 
 class NavigationBarItem extends Component {
@@ -39,6 +39,11 @@ class NavigationBar extends Component {
                 	float="right"
                     text="Browse"
                     link={"/" + BUY_FIND_ROUTE}
+                />
+                <NavigationBarItem
+                	float="right"
+                    text="Database"
+                    /* TODO: add database route here */
                 />
             </div>
         );
