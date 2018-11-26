@@ -8,12 +8,14 @@ body {
     width: 100%;
     height: 50px;
     box-sizing: border-box;
-    background-color: #3E8EDE;
+    background-color: #202020;
     color: #fff;
     padding: 0 15px;
     min-width: 520px;
     margin-bottom: 0;
-    border-bottom: 2px solid #2980b9;
+    -webkit-box-shadow:0px 1px 1px #202020;
+    -moz-box-shadow:0px 1px 1px #202020;
+    box-shadow:0px 1px 1px #202020;
     z-index: 1000;
 }
 .NavigationBarItemContainer {
@@ -22,6 +24,10 @@ body {
     height: 100%;
     box-sizing: border-box;
     padding: 0 0;
+    color: #FFFFFF;
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 .NavigationBarItemText {
     position: relative;
@@ -32,10 +38,6 @@ body {
     border-radius: 3px;
     color: #fff;
 }
-.NavigationBarItemText:hover {
-    background-color: #fff;
-    color: #3E8EDE;
-}
 .NavigationBarItemAnchor {
     position: relative;
     display: block;
@@ -43,4 +45,13 @@ body {
     height: 100%;
     cursor: pointer;
     text-decoration: none;
+}
+#Ten-Logo {
+    width: 44px;
+    height: 50px;
+    position: relative;
+    top: 60%;
+    transform: translateY(-60%);
+    display: block;
+    float: left;
 }
