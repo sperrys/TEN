@@ -17,8 +17,8 @@ main {
 
 h1 {
 	color: #FFFFFF;
-	font-size: : "48px";
-	font-family: : 'Open Sans', sans-serif;
+	font-size: "48px";
+	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
 
 }
@@ -40,8 +40,7 @@ p {
 	color: white;
 	font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
-	font-weight: "lighter";  
-
+	font-weight: "lighter";
 }
 
 .navBar {
@@ -56,4 +55,3 @@ p {
 .accentColor2 {
 	color: #50E3C2;
 }
-		
