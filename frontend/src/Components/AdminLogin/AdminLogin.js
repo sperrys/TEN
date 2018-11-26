@@ -33,9 +33,14 @@ class AdminLogin extends Component {
 			<form onSubmit={this.handleSubmit}>
 	        <label>
 	        	Password:
-	        	<input type="password" value={this.state.value} onChange={this.handleChange} style={{width: 600, height: 50, fontSize: 40, borderRadius: 10}} />
+	        	<input type="password" value={this.state.value} onChange={this.handleChange} 
+	        		style={{width: 600, height: 50, fontSize: 40, borderRadius: 10, position: 'fixed', top: 475, right: 100}} 
+	        	/>
 	       </label>
-	        	<input type="submit" value="Submit" style={{width: 300, height: 75, backgroundColor:'#4A90E3', fontSize: 40, color: 'white', borderRadius: 10}}/>
+	        	<input type="submit" value="Submit" 
+	        		style={{width: 400, height: 100, backgroundColor:'#4A90E3', fontSize: 40, color: 'white', borderRadius: 10, 
+	        		position: 'fixed', top: 600, right: 100}}
+	        	/>
 	       </form>
 		);
 
@@ -46,10 +51,17 @@ class AdminLogin extends Component {
 class App extends Component{
 	render() {
 		return (
-			<div className="Login">
-					<center><p>Please login using the administrators password</p></center>
-					<center><p>If you have forgotten the password, please ask another administrator for the passcode</p></center>
-					<AdminLogin/>
+			<div className="Login" style={{backgroundColor: 'black', width: 1500, height: 1000}}>
+				<p style={{position: 'fixed', top: 200, right: 300}}>
+							Please login using the administrators password
+				</p>
+				<p style={{position: 'fixed', top: 275, right: 230}}>
+							If you have forgotten the password, please ask another <br />administrator for the passcode
+				</p>
+				<p style={{position: 'fixed', top: 400, right: 615}}>
+							Passcode:
+				</p>
+				<AdminLogin/>
 			</div>	
 		);
 	}
