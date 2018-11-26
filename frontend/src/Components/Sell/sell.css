@@ -10,3 +10,12 @@ label {
 .inputField[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
