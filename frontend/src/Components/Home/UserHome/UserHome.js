@@ -30,8 +30,9 @@ class App extends Component {
                             <h1 className="title centered">Browse Books</h1>
                         </div>
                         <div className = "split right" style={sellStyle}>
-                            <a href={"/" + PRESELL_ROUTE} />
-                            <h1 className="title centered">PreSell Books</h1>
+                            <a href={"/" + PRESELL_ROUTE} >
+                                <h1 className="title centered">PreSell Books</h1>
+                            </a>
                         </div>
                     </div>
                 </div>

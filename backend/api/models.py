@@ -6,7 +6,7 @@ class Textbook(models.Model):
     # Filled during book posting
     post_id      = models.PositiveIntegerField(primary_key=True)
     date_added   = models.DateField(max_length=50, default="1111-11-11")
-    subject      = models.CharField(max_length=5, default="DEFAULT_SUBJECT")
+    subject      = models.CharField(max_length=50, default="DEFAULT_SUBJECT")
     class_id     = models.PositiveIntegerField(default=0)
     price        = models.PositiveIntegerField(default=0)
     donate       = models.BooleanField(default=False)
