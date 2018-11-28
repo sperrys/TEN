@@ -4,6 +4,19 @@ node_modules/
 # Webstorm
 .idea/
 
+# Virtual Environment Stuff
+.venv/
+venv/
+env/
+.env/
+
+# Linux backups
+*~
+
+# Python Extras
+__pycache__/
+*.py[cod]
+
 # Project
 dist/
 

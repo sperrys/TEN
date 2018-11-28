@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ROUTES } from "../../index.js";
 import './NavigationBar.css';
 
 class NavigationBarItem extends Component {
@@ -20,17 +21,17 @@ class NavigationBar extends Component {
                 <NavigationBarItem
                 	float="left"
                 	text="Textbook Exchange Network"
-                	link="/"
+                    link={"/" + ROUTES.home}
                 />
                 <NavigationBarItem
                 	float="right"
                 	text="About"
-                	link="/about"
+                    link={"/" + ROUTES.about}
                 />
                 <NavigationBarItem
                 	float="right"
-                	text="Sell"
-                	link="/sell"
+                    text="PreSell"
+                    link={"/" + ROUTES.presell}
                 />
                 <NavigationBarItem
                 	float="right"

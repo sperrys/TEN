@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
 import './Home.css';
 import NavigationBar from '../NavigationBar/NavigationBar.js'
-import Footer from '../Footer/Footer.js'
+import Footer from '../Footer/Footer.js';
+
+import browseorig from '../../assets/browseorig.jpg';
+import sellorig from '../../assets/sellorig.jpg';
 
 class Button extends Component {
     render() {
@@ -18,30 +21,22 @@ class Button extends Component {
 
 class App extends Component {
     render() {
+
+        const leftStyle = {
+            backgroundImage: 'url('+ browseorig +')',
+        };
+        const rightStyle = {
+            backgroundImage: 'url('+ sellorig +')',
+        };
+
         return (
-            <div>
+            <div className="HomeWrapper">
             	<div className="HomeContent">
+                    <div className="HomeSection" style={leftStyle}>
+                    </div>
+                    <div className="HomeSection" style={rightStyle}>
+                    </div>
             		<NavigationBar />
-                    <div className="HomeTitle">
-                        Textbook Exchange Network
-                    </div>
-                    <div className="HomeSubtitle">
-                        Looking to buy a textbook that isnt ridiculously expensive?
-                        Want to sell a textbook that you no longer need?
-                    </div>
-                    <div className="HomeAffirmation">
-                        Were here for you.
-                    </div>
-                    <div className="ButtonContainer">
-                        <Button
-                            text="Browse"
-                            link="/browse"
-                        />
-                        <Button
-                            text="Sell"
-                            link="/sell"
-                        />
-                    </div>
     	        </div>
                 <Footer position="fixed" />
             </div>
