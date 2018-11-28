@@ -4,8 +4,8 @@ import './Home.css';
 import NavigationBar from '../NavigationBar/NavigationBar.js'
 import Footer from '../Footer/Footer.js';
 
-import browseorig from '../../assets/browseorig.jpg';
-import sellorig from '../../assets/sellorig.jpg';
+import LeftImage from '../../assets/left-image.jpg';
+import RightImage from '../../assets/right-image.jpg';
 
 class Button extends Component {
     render() {
@@ -23,22 +23,27 @@ class App extends Component {
     render() {
 
         const leftStyle = {
-            backgroundImage: 'url('+ browseorig +')',
+            backgroundImage: 'url('+ LeftImage +')',
         };
         const rightStyle = {
-            backgroundImage: 'url('+ sellorig +')',
+            backgroundImage: 'url('+ RightImage +')',
         };
 
         return (
             <div className="HomeWrapper">
             	<div className="HomeContent">
                     <div className="HomeSection" style={leftStyle}>
+                        <div className="HomeTitle">
+                            <div className="HomeTitleText">Browse Textbooks</div>
+                        </div>
                     </div>
                     <div className="HomeSection" style={rightStyle}>
+                        <div className="HomeTitle">
+                            <div className="HomeTitleText">Pre-sell Textbooks</div>
+                        </div>
                     </div>
             		<NavigationBar />
     	        </div>
-                <Footer position="fixed" />
             </div>
         );
     }
