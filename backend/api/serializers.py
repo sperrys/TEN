@@ -1,10 +1,15 @@
 from rest_framework import serializers
 from .models import *
 
+class userSerializer(serializers.ModelSerializer):
 
+    class Meta:
+        model = user
+        fields = ('email', 'venmo')
 class SellSerializer(serializers.ModelSerializer):
+	seller = userSerializer()
+	buyer = userSerializer()
 	class Meta:
 		model = Textbook
-		fields = ('post_id', 'date_added', 'subject','isbn','class_id','title',
-			      'edition','price','paid_type','date_sold','buyer_id')
+		fields =  ('__all__')
 

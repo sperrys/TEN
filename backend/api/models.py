@@ -3,19 +3,19 @@ from django.db import models
 
 #User Table:
 class user(models.Model):
-    user_id = models.PositiveIntegerField(primary_key=True)
-    name  = models.CharField(max_length=50)
-    email = models.CharField(max_length=100, unique=True)
-    phone = models.PositiveIntegerField()
-    venmo = models.CharField(max_length=50)
+    #user_id = models.PositiveIntegerField(primary_key=True)
+    name  = models.CharField(max_length=50, default="JUMBO")
+    email = models.CharField(max_length=100, primary_key=True, default="NOEMAIL")
+    phone = models.PositiveIntegerField(default=0)
+    venmo = models.CharField(max_length=50, default="VENMO")
 
     def __str__(self):
-        return self.name
+        return self.email
         
 # Textbook Table:
 class Textbook(models.Model):
     # Filled during book posting
-    post_id      = models.PositiveIntegerField(primary_key=True)
+    post_id      = models.AutoField(primary_key=True)
     date_added   = models.DateField(max_length=50, default="1111-11-11")
     subject      = models.CharField(max_length=50, default="SUBJECT")
     class_id     = models.PositiveIntegerField(default=0)
@@ -34,8 +34,8 @@ class Textbook(models.Model):
  
 
     #buyer/seller data, reference to user table for consistancy
-    seller_id = models.ForeignKey('user', on_delete=models.CASCADE, related_name='seller_id')
-    buyer_id = models.ForeignKey('user', null=True, on_delete=models.SET_NULL, related_name='buyer_id')
+    seller = models.ForeignKey('user', on_delete=models.CASCADE, related_name='seller')
+    buyer = models.ForeignKey('user', null=True, on_delete=models.SET_NULL, related_name='buyer')
 """
 
     #def is_valid(self):

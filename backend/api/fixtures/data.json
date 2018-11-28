@@ -15,8 +15,8 @@
     "sold":false,
     "paid_type": 0,
     "date_sold": "1111-11-11",
-    "seller_id":1,
-    "buyer_id" : 1
+    "seller":"noemail",
+    "buyer" : "noemail"
   }
 },
 {
@@ -35,15 +35,14 @@
     "sold":false,
     "paid_type": 0,
     "date_sold": "1111-11-11",
-     "seller_id":1,
-    "buyer_id" : 1
+     "seller":"noemail",
+    "buyer" : "noemail"
   }
 },
 {
     "model": "api.user",
     "pk":1,
     "fields": {
-      "user_id": 1,
       "name": "Juliet",  
       "email" : "noemail", 
       "phone" : 123,
