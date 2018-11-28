@@ -3,7 +3,7 @@ import './BuyCart.css';
 import { BUY_ADD_CART_ROUTE } from "../../../index.js";
 import NavigationBar from './../../NavigationBar/NavigationBar.js';
 import proofimg from '../../../assets/buy/proof.png';
-import BuyCartItem from '../../../assets/buy/BuyCartItem/BuyCartItem.js'
+import BuyCartItem from '../BuyCartItem/BuyCartItem.js'
 
 class BuyCart extends Component {
 

@@ -1,3 +1,6 @@
+import React, { Component } from 'react';
+import '../BuyCart/BuyCart.css';
+
 class BuyCartItem extends Component {
     render() {
         return (
@@ -20,3 +23,5 @@ class BuyCartItem extends Component {
         );
     }
 }
+
+export default BuyCartItem;

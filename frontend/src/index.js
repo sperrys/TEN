@@ -11,7 +11,7 @@ import PreSell from './Components/Sell/Sell';
 import BuyFind from './Components/Buy/BuyFind/BuyFind';
 import BuyCart from './Components/Buy/BuyCart/BuyCart';
 import BuyAddtoCart from './Components/Buy/BuyAddtoCart/BuyAddtoCart';
-import BuySummary from './Components/Buy/BuySummary/BuyAddtoCart';
+import BuySummary from './Components/Buy/BuySummary/BuySummary';
 
 export const USER_HOME_ROUTE = "";
 export const ADMIN_HOME_ROUTE = "adminhome";
