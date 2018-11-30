@@ -1,5 +1,5 @@
 env:
-    - export DJANGO_SETTINGS_MODULE=TEN_backend.settings.travis
+    - export DJANGO_SETTINGS_MODULE=backend.settings.travis
 notifications:
   email: false
 jobs:

@@ -7,7 +7,4 @@ class TextbookTests(APITestCase):
 
     # Function run before to populate database for tests
     def setUp(self):
-        self.jumbos = Textbook.objects.create(post_id=1)
-        self.jumbolinas = Textbook.objects.create(post_id=2)
-        self.monaco = Textbook.objects.create(post_id=3)
-
+        pass
