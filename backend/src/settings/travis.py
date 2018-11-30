@@ -1,5 +1,5 @@
 import os
-import base
+from .base import *
 
 if 'TRAVIS' in os.environ:
     DATABASES = {
