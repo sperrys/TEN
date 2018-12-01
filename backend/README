@@ -73,6 +73,12 @@ BACKEND README
     -To quit postgres 
         "\q"
 
+# Database Commands (These require that local postgres database is on)
+    -To delete a database like djangotutorial
+        "dropdb <name of database>"
+    -To create a database like djangotutorial
+        "createdb <name of database>"
+
 # Common Problems
     -You have a column in your database that Django expects, but in your
      data.json (or whatever file you're trying "loaddata" with), you 
