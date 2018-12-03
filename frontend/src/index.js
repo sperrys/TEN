@@ -14,7 +14,7 @@ import BuyAddtoCart from './Components/Buy/BuyAddtoCart/BuyAddtoCart';
 
 export const ROUTES = {
 	user_home: '',
-	admin_home: '/admin-home',
+	admin_home: 'admin-home',
 	about: 'about',
 	presell: 'presell',
 	buy: 'buy',
