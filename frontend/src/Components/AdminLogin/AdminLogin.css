@@ -1,9 +1,73 @@
-.Login{
-    text-align: center;
-    font-size: 18px;
-
+.AdminLoginInputContainer{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30%;
+	height: 30%;
 }
-.Header{
-    padding: 20px 10px;
-    background-color: 'black';
+
+.AdminLoginInput {
+	font-size: 40px; 
+	border-radius: 15% 15%; 
+	position: absolute; 
+	top: 10%;
+	width: 95%;
+	height: 15%; 
+	left: 5%;
+}	
+
+.AdminLoginSubmit { 
+	background-color: #4A90E3; 
+	font-size: 150%;
+	color: white; 
+	border-radius: 10% 15%;
+	position: absolute;
+	height: 30%; 
+	width: 78%;
+	left: 25%;
+	top: 65%;
+}
+
+.AdminLoginTextContainer {
+	background-color: black; 
+	opacity: .85; 
+	position: absolute;
+	width: 100%; 
+	height: 100%;
+}
+
+.AdminLoginP1 {
+	position: absolute;
+	font-size: 110%;
+	left: 51%;
+	top: 25%;
+}
+
+.AdminLoginP2 {
+	position: absolute;
+	font-size: 110%;
+	left: 51%;
+	top: 30%;
+}
+
+.AdminLoginP3 {
+	position: absolute;
+	font-size: 110%;
+	left: 51%;
+	top: 45%;
+}
+
+.AdminLoginP4 {
+	position: absolute;
+	font-size: 110%;
+	left: 43%;
+	top: 90%;
+}
+
+#LogoStyling {
+	position: absolute; 
+	top: 10%; 
+	left: 5%; 
+	height: 80%; 
+	width: 40%;
 }

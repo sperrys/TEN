@@ -21,7 +21,7 @@ class AdminLogin extends Component {
   }
 
   handleSubmit(event) {
-    if(this.state.value == "jumbo"){
+    if(this.state.value === "jumbo"){
     	history.push('/AdminHome');
     	window.location.reload()
     }
@@ -30,18 +30,14 @@ class AdminLogin extends Component {
 
 	render(){
 		return (
+		<div className="AdminLoginInputContainer">
 			<form onSubmit={this.handleSubmit}>
 	        <label>
-	        	Password:
-	        	<input type="password" value={this.state.value} onChange={this.handleChange} 
-	        		style={{width: 600, height: 50, fontSize: 40, borderRadius: 10, position: 'fixed', top: 425, right: 100}} 
-	        	/>
+	        	<input type="password" className="AdminLoginInput" value={this.state.value} onChange={this.handleChange} />
 	       </label>
-	        	<input type="submit" value="Submit" 
-	        		style={{width: 400, height: 100, backgroundColor:'#4A90E3', fontSize: 40, color: 'white', borderRadius: 10, 
-	        		position: 'fixed', top: 550, right: 100}}
-	        	/>
+	        	<input type="submit" value="Submit" className="AdminLoginSubmit"/>
 	       </form>
+	    </div>
 		);
 
 	}
@@ -51,21 +47,21 @@ class AdminLogin extends Component {
 class App extends Component{
 	render() {
 		return (
-			<div className="Login" style={{backgroundColor: 'black', opacity: .85, width: 1500, height: 1000}}>
-				<p style={{position: 'fixed', top: 175, right: 300}}>
-							Please login using the administrators password
-				</p>
-				<p style={{position: 'fixed', top: 225, right: 230}}>
-							If you have forgotten the password, please ask another <br />administrator for the passcode
-				</p>
-				<p style={{position: 'fixed', top: 350, right: 615}}>
-							Passcode:
-				</p>
-				<p style={{position: 'fixed', top: 750, right: 650}}>
-							Copyright TEN 2018
-				</p>
-				<AdminLogin/>
-				<img src={logo} style={{position: 'fixed', top: 75, right: 800, height: 725, width: 600}}/>
+			<div className="AdminLoginTextContainer">
+					<p className="AdminLoginP1">
+								Please login using the administrators password
+					</p>
+					<p className="AdminLoginP2">
+								If you have forgotten the password, please ask another <br />administrator for the passcode
+					</p>
+					<p className="AdminLoginP3">
+								Passcode:
+					</p>
+					<p className="AdminLoginP4">
+								Copyright TEN 2018
+					</p>
+					<AdminLogin/>
+					<img src={logo} id="LogoStyling"/>
 			</div>	
 		);
 	}
