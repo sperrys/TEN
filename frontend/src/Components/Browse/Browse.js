@@ -5,38 +5,102 @@ import NavigationBar from '../NavigationBar/NavigationBar.js'
 import Footer from '../Footer/Footer.js'
 
 class Result extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            editing: false
+        }
+        this.editButton = React.createRef();
+        this.resultTitle = React.createRef();
+        this.resultSubtitle = React.createRef();
+        this.resultEdition = React.createRef();
+        this.resultPrice = React.createRef();
+        this.toggleEditing = this.toggleEditing.bind(this);
+    }
+
+    toggleEditing() {
+        const editing = !this.state.editing;
+        this.setState({
+            editing: editing
+        });
+
+        const inputs = ['resultTitle', 'resultSubtitle', 'resultEdition', 'resultPrice'];
+
+        if (editing) {
+            this.editButton.current.innerHTML = 'Save';
+            this.editButton.current.style.backgroundColor = '#2ecc71';
+
+            
+
+            for (let i = 0; i < inputs.length; i++) {
+                let el = this[inputs[i]];
+                el.current.style.borderBottom = '1px dashed lightgray';
+                el.current.readOnly = false;
+            }
+        }
+        else {
+            this.editButton.current.innerHTML = 'Edit';
+            this.editButton.current.style.backgroundColor = '#2c3e50';
+
+            for (let i = 0; i < inputs.length; i++) {
+                let el = this[inputs[i]];
+                el.current.style.borderBottom = '1px dashed transparent';
+                el.current.readOnly = true;
+            }
+        }
+    }
+
     render() {
         return (
-            <div className="ResultWrapper">
+            <form
+                className="ResultWrapper"
+                onSubmit={(e) => {
+                    e.preventDefault();
+                    this.toggleEditing();
+                }}
+            >
                 <div className="ResultContainer">
                     <div className="ResultUpper">
-                        <div className="ResultTitle">
-                            {this.props.title}
-                        </div>
+                        <input className="ResultTitle"
+                            defaultValue={this.props.title}
+                            ref={this.resultTitle}
+                            readOnly={true}
+                        />
+                        <button
+                            className="EditButton"
+                            ref={this.editButton}
+                        >
+                            Edit
+                        </button>
                         <div className="ResultSubtitle">
-                            <div className="ResultAuthor">
-                                {this.props.author}
-                            </div>
-                            <div className="ResultDot">
-                                &middot;
-                            </div>
-                            <div className="ResultEdition">
-                                {this.props.edition}
-                            </div>
+                            <input
+                                className="ResultAuthor"
+                                defaultValue={this.props.author}
+                                ref={this.resultSubtitle}
+                                readOnly={true}
+                            />
+                            <br />
+                            <input
+                                className="ResultEdition"
+                                defaultValue={this.props.edition}
+                                ref={this.resultEdition}
+                                readOnly={true}
+                            />
                         </div>
                     </div>
                     <div className="ResultLower">
-                        <div className="ResultCondition">
-                            Condition: {this.props.condition}
-                        </div>
                         <div className="ResultRow">
-                            <div className="ResultPrice">
-                                {this.props.price}
-                            </div>
+                            <input
+                                className="ResultPrice"
+                                defaultValue={this.props.price}
+                                ref={this.resultPrice}
+                                readOnly={true}
+                            />
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         );
     }
 }
@@ -139,7 +203,8 @@ class BrowseContent extends Component {
                         <div>
                             <InputField
                                 placeholder="Textbook"
-                                suggestions={['Hydrogen', 'Helium', 'Lithium', 'Boron', 'Carbon', 'Nitrogen', 'Oxygen', 'Flourine', 'Neon', 'Sodium', 'Rhodium']}
+                                // textbook suggestions go here
+                                suggestions={['Problem Solving with C++', 'Partial Differential Equations', 'Chemistry: The Central Science']}
                             />
                         </div>
                         <button className="SearchButton">Search</button>
@@ -149,21 +214,18 @@ class BrowseContent extends Component {
                             title="Problem Solving with C++"
                             author="Walter Savitch"
                             edition="9th Edition"
-                            condition="Great"
                             price="$50.00"
                         />
                         <Result
                             title="Partial Differential Equations"
                             author="Stanley J. Farlow"
                             edition="1st Edition"
-                            condition="Used"
                             price="$35.50"
                         />
                         <Result
                             title="Chemistry: The Central Science"
                             author="Brown, Lemay, Bursten"
                             edition="14th Edition"
-                            condition="Brand New"
                             price="$60.00"
                         />
                     </div>
@@ -173,7 +235,7 @@ class BrowseContent extends Component {
     }
 }
 
-class App extends Component {
+class Browse extends Component {
     render() {
         return (
             <div>
@@ -185,4 +247,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Browse;
