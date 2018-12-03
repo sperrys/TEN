@@ -6,7 +6,7 @@ class user(models.Model):
     #user_id = models.PositiveIntegerField(primary_key=True)
     name  = models.CharField(max_length=50, default="JUMBO")
     email = models.CharField(max_length=100, primary_key=True, default="NOEMAIL")
-    phone = models.PositiveIntegerField(default=0)
+    phone = models.PositiveIntegerField(max_length=15, default=0)
     venmo = models.CharField(max_length=50, default="VENMO")
 
     def __str__(self):
