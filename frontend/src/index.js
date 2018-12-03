@@ -13,7 +13,8 @@ import BuyAddtoCart from './Components/Buy/BuyAddtoCart/BuyAddtoCart';
 
 
 export const ROUTES = {
-	home: '',
+	user_home: '',
+	admin_home: '/admin-home'
 	about: 'about',
 	presell: 'presell',
 	buy: 'buy',
@@ -24,23 +25,22 @@ export const ROUTES = {
 ReactDOM.render(
 	<div className="BodyWrapper">
 	    <Router>
-	      <Route exact path={"/" + ROUTES.home} component={Home}/>
+	    	<Route exact path={"/" + ROUTES.user_home} component={Home}/>
 	    </Router>
 	    <Router>
-	      <Route exact path={"/" + ROUTES.about} component={About}/>
+	    	<Route exact path={"/" + ROUTES.about} component={About}/>
 	    </Router>
 		<Router>
-	      <Route exact path={"/" + ROUTES.presell} component={PreSell}/>
+	    	<Route exact path={"/" + ROUTES.presell} component={PreSell}/>
 	    </Router>
 		<Router>
-	      <Route exact path={"/" + ROUTES.buy} component={BuyFind}/>
+	    	<Route exact path={"/" + ROUTES.buy} component={BuyFind}/>
 	    </Router>
 	    <Router>
-	      <Route exact path={"/" + ROUTES.cart} component={BuyAddtoCart}/>
+	    	<Route exact path={"/" + ROUTES.cart} component={BuyAddtoCart}/>
 	    </Router>
 		<Router>
-	      <Route exact path={"/" + ROUTES.addtocart} component={BuyCart}/>
+	    	<Route exact path={"/" + ROUTES.addtocart} component={BuyCart}/>
 	    </Router>
-
     </div>, document.getElementById('root'));
 registerServiceWorker();
