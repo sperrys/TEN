@@ -2,22 +2,10 @@ import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
 import './Home.css';
 import NavigationBar from '../NavigationBar/NavigationBar.js'
-import Footer from '../Footer/Footer.js';
+//import Footer from '../Footer/Footer.js';
 
 import LeftImage from '../../assets/left-image.jpg';
 import RightImage from '../../assets/right-image.jpg';
-
-class Button extends Component {
-    render() {
-        return (
-            <a href={this.props.link}>
-                <button className="BigButton">
-                    {this.props.text}
-                </button>
-            </a>
-        );
-    }
-}
 
 class App extends Component {
     render() {
