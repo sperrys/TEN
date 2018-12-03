@@ -1,0 +1,135 @@
+
+body {
+	background-color: #F2F2F2;
+}
+.BrowseWrapper {
+	position: relative;
+	box-sizing: border-box;
+	padding: 0 20px;
+}
+.BrowseContainer {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-top: 20px;
+	max-width: 620px;
+}
+.SearchContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.SearchInput {
+	border: none;
+}
+.SearchButton {
+	color: #fff;
+	background-color: #3498db;
+	border: none;
+}
+.SearchInput, .SearchButton {
+	padding: 5px 15px;
+	font-size: 16px;
+	margin: 10px 4px;
+	display: block;
+	border-radius: 6px;
+	outline: none;
+}
+.ResultsWrapper {
+	z-index: 0;
+}
+.ResultWrapper {
+	padding: 5px 5px;
+}
+.ResultContainer {
+	border-radius: 10px;
+	background-color: #fff;
+	overflow: hidden;
+}
+.ResultUpper {
+	border-bottom: 1px solid #f7f7f7;
+	box-sizing: border-box;
+}
+.ResultLower {
+	background-color: #f9f9f9;
+	position: relative;
+}
+.ResultTitle {
+	font-size: 24px;
+	font-family: 'Roboto Slab', sans-serif;
+	padding: 10px 15px 0 15px;
+}
+.ResultSubtitle {
+	font-size: 14px;
+	padding: 0px 15px;
+}
+.ResultAuthor {
+	color: #000;
+	display: inline-block;
+}
+.ResultEdition {
+	color: gray;
+	display: inline-block;
+}
+.ResultDot{
+	color: #000;
+	display: inline-block;
+	padding: 0 5px 10px 5px;
+}
+.ResultCondition {
+	position: absolute;
+	top: 0;
+	font-size: 14px;
+	padding: 5px 15px 0 15px;
+}
+.ResultRow {
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+.ResultPrice {
+	font-size: 36px;
+	display: inline-block;
+	padding: 0 15px 5px 15px;
+}
+
+
+.InputContainer {
+	position: relative;
+	height: auto;
+	font-size: 16px;
+	z-index: 1;
+}
+.Input {
+	font-size: inherit;
+	display: block;
+	border-radius: 6px;
+	outline: none;
+	border: none;
+}
+.InputSuggestions {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	max-height: 320px;
+	border-radius: 6px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border: 1px solid #f7f7f7;
+	box-shadow: 0 1px 3px #f7f7f7;
+}
+.InputSuggestion {
+	background-color: #fff;
+	padding: 5px 15px;
+	border-bottom: 1px solid #f7f7f7;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.InputSuggestionRegular {
+	color: #000;
+}
+.InputSuggestionBold {
+	color: #000;
+	font-weight: bold;
+}

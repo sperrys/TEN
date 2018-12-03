@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './BuyCart.css';
-import { BUY_ADD_CART_ROUTE } from "../../../index.js";
+import { ROUTES } from "../../../index.js";
 import NavigationBar from './../../NavigationBar/NavigationBar.js';
 import proofimg from '../../../assets/buy/proof.png';
 
@@ -36,7 +36,7 @@ class BuyCart extends Component {
         		<NavigationBar />
                 {/* TODO: make this a button - currently make whole screen clickable*/}
         		<div class="back">
-        			<a href={"/" + BUY_ADD_CART_ROUTE}>&#60; BACK</a>
+        			<a href={"/" + ROUTES.cart}>&#60; BACK</a>
         		</div>
                 <div class="horizflex">
 	            	<div class="vertflex cartborder summary">

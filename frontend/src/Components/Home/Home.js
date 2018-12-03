@@ -2,48 +2,36 @@ import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
 import './Home.css';
 import NavigationBar from '../NavigationBar/NavigationBar.js'
-import Footer from '../Footer/Footer.js'
+//import Footer from '../Footer/Footer.js';
 
-class Button extends Component {
-    render() {
-        return (
-            <a href={this.props.link}>
-                <button className="BigButton">
-                    {this.props.text}
-                </button>
-            </a>
-        );
-    }
-}
+import LeftImage from '../../assets/left-image.jpg';
+import RightImage from '../../assets/right-image.jpg';
 
 class App extends Component {
     render() {
+
+        const leftStyle = {
+            backgroundImage: 'url('+ LeftImage +')',
+        };
+        const rightStyle = {
+            backgroundImage: 'url('+ RightImage +')',
+        };
+
         return (
-            <div>
+            <div className="HomeWrapper">
             	<div className="HomeContent">
+                    <div className="HomeSection" style={leftStyle}>
+                        <div className="HomeTitle">
+                            <div className="HomeTitleText">Browse Textbooks</div>
+                        </div>
+                    </div>
+                    <div className="HomeSection" style={rightStyle}>
+                        <div className="HomeTitle">
+                            <div className="HomeTitleText">Pre-sell Textbooks</div>
+                        </div>
+                    </div>
             		<NavigationBar />
-                    <div className="HomeTitle">
-                        Textbook Exchange Network
-                    </div>
-                    <div className="HomeSubtitle">
-                        Looking to buy a textbook that isnt ridiculously expensive?
-                        Want to sell a textbook that you no longer need?
-                    </div>
-                    <div className="HomeAffirmation">
-                        Were here for you.
-                    </div>
-                    <div className="ButtonContainer">
-                        <Button
-                            text="Browse"
-                            link="/browse"
-                        />
-                        <Button
-                            text="Sell"
-                            link="/sell"
-                        />
-                    </div>
     	        </div>
-                <Footer position="fixed" />
             </div>
         );
     }

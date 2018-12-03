@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { ROUTES } from "../../index.js";
-import './NavigationBar.css';
+import { ADMIN_HOME_ROUTE, ABOUT_ROUTE, BUY_FIND_ROUTE } from "../../index.js";
+import '../NavigationBar.css';
 import ten from '../../assets/ten-logo.png';
 
 class NavigationBarItem extends Component {
@@ -19,26 +19,31 @@ class NavigationBar extends Component {
     render() {
         return (
             <div className="NavigationBarContainer">
-                <img id="Ten-Logo"src={ten} alt="ten-logo"/>
+                <img id="Ten-Logo"src={ten} />
                 <NavigationBarItem
                 	float="left"
                 	text="Textbook Exchange Network"
-                    link={"/" + ROUTES.home}
+                    link={"/" + ADMIN_HOME_ROUTE}
                 />
                 <NavigationBarItem
                 	float="right"
                 	text="About"
-                    link={"/" + ROUTES.about}
+                    link={"/" + ABOUT_ROUTE}
                 />
                 <NavigationBarItem
                 	float="right"
-                    text="Pre-sell"
-                    link={"/" + ROUTES.presell}
+                    text="PreSell"
+                    /* TODO: add sell route here*/
                 />
                 <NavigationBarItem
                 	float="right"
-                	text="Browse"
-                	link="/browse"
+                    text="Browse"
+                    link={"/" + BUY_FIND_ROUTE}
+                />
+                <NavigationBarItem
+                	float="right"
+                    text="Database"
+                    /* TODO: add database route here */
                 />
             </div>
         );
