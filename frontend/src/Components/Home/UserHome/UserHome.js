@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PRESELL_ROUTE } from "../../../index.js";
+import { ROUTES } from "../../../index.js";
 import './UserHome.css';
 import NavigationBar from '../../NavigationBar/NavigationBar.js';
 import Footer from '../../Footer/Footer.js';
@@ -30,7 +30,7 @@ class App extends Component {
                             <h1 className="title centered">Browse Books</h1>
                         </div>
                         <div className = "split right" style={sellStyle}>
-                            <a href={"/" + PRESELL_ROUTE} >
+                            <a href={"/" + ROUTES.PRESELL} >
                                 <h1 className="title centered">PreSell Books</h1>
                             </a>
                         </div>

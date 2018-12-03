@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../UserHome/UserHome.css';
-import { BUY_FIND_ROUTE } from "../../../index.js";
+import { ROUTES } from "../../../index.js";
 import NavigationBar from '../../NavigationBar/NavigationBar.js';
 import Footer from '../../Footer/Footer.js'
 import browseorig from '../../../assets/browseorig.jpg';
@@ -25,7 +25,7 @@ class App extends Component {
         		<NavigationBar /> {/* TODO: make new nav bar for admins*/}
                 <div class="horizflex">
                     <div class = "split left" style={backgroundStyle}>
-                        <a href={"/" + BUY_FIND_ROUTE}>
+                        <a href={"/" + ROUTES.BUY_FIND}>
                             <h1 class="title centered">Buy Books</h1>
                         </a>
                     </div>

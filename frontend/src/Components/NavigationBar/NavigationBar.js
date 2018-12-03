@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { USER_HOME_ROUTE, ABOUT_ROUTE, PRESELL_ROUTE } from "../../index.js";
+import { ROUTES } from "../../index.js";
 import './NavigationBar.css';
 import ten from '../../assets/ten-logo.png';
 
@@ -23,17 +23,17 @@ class NavigationBar extends Component {
                 <NavigationBarItem
                 	float="left"
                 	text="Textbook Exchange Network"
-                    link={"/" + USER_HOME_ROUTE}
+                    link={"/" + ROUTES.STUDENT_HOME}
                 />
                 <NavigationBarItem
                 	float="right"
                 	text="About"
-                    link={"/" + ABOUT_ROUTE}
+                    link={"/" + ROUTES.ABOUT}
                 />
                 <NavigationBarItem
                 	float="right"
                     text="PreSell"
-                    link={"/" + PRESELL_ROUTE}
+                    link={"/" + ROUTES.PRESELL}
                 />
                 <NavigationBarItem
                 	float="right"

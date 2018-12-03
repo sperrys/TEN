@@ -12,36 +12,38 @@ import BuyFind from './Components/Buy/BuyFind/BuyFind';
 import BuyCart from './Components/Buy/BuyCart/BuyCart';
 import BuyAddtoCart from './Components/Buy/BuyAddtoCart/BuyAddtoCart';
 
-export const USER_HOME_ROUTE = "";
-export const ADMIN_HOME_ROUTE = "adminhome";
-export const ABOUT_ROUTE = "about";
-export const PRESELL_ROUTE = "presell";
-export const BUY_FIND_ROUTE = "buy";
-export const BUY_CART_ROUTE = "cart";
-export const BUY_ADD_CART_ROUTE = "addtocart";
+export const ROUTES = {
+	STUDENT_HOME: '',
+	VOLUNTEER_HOME: 'adminhome',
+	ABOUT: 'about',
+	PRESELL: 'presell',
+	BUY_FIND: 'buy',
+	BUY_CART: 'cart',
+	BUY_ADD_CART: 'addtocart'
+}
 
 ReactDOM.render(
 	<div className="BodyWrapper">
 	    <Router>
-	      <Route exact path={"/" + USER_HOME_ROUTE} component={UserHome}/>
+	      <Route exact path={"/" + ROUTES.STUDENT_HOME} component={UserHome}/>
 	    </Router>
 		<Router>
-	      <Route exact path={"/" + ADMIN_HOME_ROUTE} component={AdminHome}/>
+	      <Route exact path={"/" + ROUTES.VOLUNTEER_HOME} component={AdminHome}/>
 	    </Router>
 	    <Router>
-	      <Route exact path={"/" + ABOUT_ROUTE} component={About}/>
+	      <Route exact path={"/" + ROUTES.ABOUT} component={About}/>
 	    </Router>
 		<Router>
-	      <Route exact path={"/" + PRESELL_ROUTE} component={PreSell}/>
+	      <Route exact path={"/" + ROUTES.PRESELL} component={PreSell}/>
 	    </Router>
 		<Router>
-	      <Route exact path={"/" + BUY_FIND_ROUTE} component={BuyFind}/>
+	      <Route exact path={"/" + ROUTES.BUY_FIND} component={BuyFind}/>
 	    </Router>
 	    <Router>
-	      <Route exact path={"/" + BUY_ADD_CART_ROUTE} component={BuyAddtoCart}/>
+	      <Route exact path={"/" + ROUTES.BUY_ADD_CART} component={BuyAddtoCart}/>
 	    </Router>
 		<Router>
-	      <Route exact path={"/" + BUY_CART_ROUTE} component={BuyCart}/>
+	      <Route exact path={"/" + ROUTES.BUY_CART} component={BuyCart}/>
 	    </Router>
 
     </div>, document.getElementById('root'));
