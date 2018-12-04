@@ -19,7 +19,7 @@ class NavigationBar extends Component {
     render() {
         return (
             <div className="NavigationBarContainer">
-                <img id="Ten-Logo"src={ten} alt="ten-logo"/>
+                <img id="Ten-Logo" src={ten} alt="ten-logo"/>
                 <NavigationBarItem
                 	float="left"
                 	text="Textbook Exchange Network"
