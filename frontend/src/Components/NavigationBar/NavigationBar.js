@@ -23,7 +23,7 @@ class NavigationBar extends Component {
                 <NavigationBarItem
                 	float="left"
                 	text="Textbook Exchange Network"
-                    link={"/" + ROUTES.home}
+                    link={"/" + ROUTES.user_home}
                 />
                 <NavigationBarItem
                 	float="right"
@@ -38,7 +38,7 @@ class NavigationBar extends Component {
                 <NavigationBarItem
                 	float="right"
                 	text="Browse"
-                	link="/browse"
+                	link={"/" + ROUTES.browse}
                 />
             </div>
         );
