@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './BuyCart.css';
 import { ROUTES } from "../../../index.js";
-import NavigationBar from './../../NavigationBar/NavigationBar.js';
+import AdminNav from './../../NavigationBar/Admin/AdminNav';
 import proofimg from '../../../assets/buy/proof.png';
 
 
@@ -33,7 +33,7 @@ class BuyCart extends Component {
     render() {
         return (
         	<div>
-        		<NavigationBar />
+        		<AdminNav />
                 {/* TODO: make this a button - currently make whole screen clickable*/}
         		<div class="back">
         			<a href={"/" + ROUTES.cart}>&#60; BACK</a>

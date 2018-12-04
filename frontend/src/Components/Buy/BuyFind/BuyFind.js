@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './BuyFind.css';
-import NavigationBar from './../../NavigationBar/NavigationBar.js';
+import Footer from '../../Footer/Footer';
+import AdminNav from './../../NavigationBar/Admin/AdminNav';
 import textbookdiagram from '../../../assets/buy/temp-textbook-diagram.jpg';
 import searchicon from '../../../assets/buy/searchicon.png';
 
@@ -10,7 +11,7 @@ class BuyFind extends Component {
     render() {
         return (
         	<div>
-        		<NavigationBar />
+        		<AdminNav />
 		      	<div class="vertcenter">
 
 			      	<div class="horizflex">
@@ -23,6 +24,7 @@ class BuyFind extends Component {
 		        	<img id="textbookdiagram" src ={textbookdiagram} alt="textbook diagram"/>
 
 	  	        </div>
+                <Footer position="fixed"/>
 	        </div>
         );
     }

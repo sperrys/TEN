@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../Browse/Browse.css';
-import NavigationBar from '../NavigationBar/NavigationBar.js'
-import Footer from '../Footer/Footer.js'
+import NavigationBar from '../NavigationBar/NavigationBar.js';
+import Footer from '../Footer/Footer.js';
 
 class Result extends Component {
 
@@ -31,7 +31,7 @@ class Result extends Component {
             this.editButton.current.innerHTML = 'Save';
             this.editButton.current.style.backgroundColor = '#2ecc71';
 
-            
+
 
             for (let i = 0; i < inputs.length; i++) {
                 let el = this[inputs[i]];
