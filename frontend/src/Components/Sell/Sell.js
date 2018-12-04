@@ -182,6 +182,11 @@ class Label extends React.Component {
 }
 
 class App extends React.Component {
+
+	componentDidMount() {
+        document.title = 'Pre-sell Textbooks - Textbook Exchange Network';
+    }
+
     render() {
         return (
             <div>

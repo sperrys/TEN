@@ -58,6 +58,11 @@ class StatisticCanvas extends Component {
 }
 
 class App extends Component {
+
+    componentDidMount() {
+        document.title = 'About - Textbook Exchange Network';
+    }
+
     render() {
         return (
             <div>

@@ -19,6 +19,10 @@ class Result extends Component {
         this.toggleEditing = this.toggleEditing.bind(this);
     }
 
+    componentDidMount() {
+        document.title = 'Browse Textbooks - Textbook Exchange Network';
+    }
+
     toggleEditing() {
         const editing = !this.state.editing;
         this.setState({
@@ -30,8 +34,6 @@ class Result extends Component {
         if (editing) {
             this.editButton.current.innerHTML = 'Save';
             this.editButton.current.style.backgroundColor = '#2ecc71';
-
-
 
             for (let i = 0; i < inputs.length; i++) {
                 let el = this[inputs[i]];

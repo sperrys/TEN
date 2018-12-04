@@ -9,6 +9,11 @@ import LeftImage from '../../assets/left-image.jpg';
 import RightImage from '../../assets/right-image.jpg';
 
 class App extends Component {
+
+    componentDidMount() {
+        document.title = 'Home - Textbook Exchange Network';
+    }
+
     render() {
 
         const leftStyle = {
