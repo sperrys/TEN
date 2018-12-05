@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import '../Browse/Browse.css';
+import '../Browse/BrowseEdit.css';
 import AdminNav from '../NavigationBar/Admin/AdminNav.js';
 import Footer from '../Footer/Footer.js';
 
