@@ -79,6 +79,27 @@ BACKEND README
     -To create a database like djangotutorial
         "createdb <name of database>"
 
+# Useful Django Code 
+    - To loop through post parameters
+        "for key in request.POST:
+            print(key)
+            print(request.POST[key])
+            print("")"
+        
+    - To serialize all the textbooks in the database (and thus strip books of unnecessary fields)
+        -Ask for all textbook objects from database, without filtering
+            "textbooks = Textbook.objects.all()"
+
+        -Ask for all textbook objects from database, with filtering by post_id
+            "textbooks = Textbook.objects.filter(post_id=2)"
+
+        -Serialize the books 
+            "serializedTextbooks = TestSerializer(textbooks, many=True)"
+            
+        -Return the serialized data in a response
+            "return Response(serializedTextbooks.data)"
+
+
 # Common Problems
     -You have a column in your database that Django expects, but in your
      data.json (or whatever file you're trying "loaddata" with), you 

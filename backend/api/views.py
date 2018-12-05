@@ -15,24 +15,17 @@ class ListBookRaw(generics.ListCreateAPIView):
 
     def post(self, request, *args, **kwargs):
 
-        # Loop through post parameters
-        #for key in request.POST:
-        #    print(key)
-        #    print(request.POST[key])
-        #    print("")
-
-        # retrieve email parameter
+        # Retrieve email parameter
         emailParam = request.POST.get("seller.email")
 
-        # check if user exists in database
-        # if user doesn't exist, create a new one
-        # otherwise, update the current one
+        # Check if user exists in database using their
+        # email as a unique identifier
+        # -if user doesn't exist, create a new one
+        # -otherwise, update the current one
         try:
-            bookUser = user.objects.get(email=emailParam)
-            #print("found user with email " + emailParam)            
+            bookUser = user.objects.get(email=emailParam)            
 
         except:
-            #print("didn't find user with email " + emailParam)
             bookUser = user(name="Somename",
                             email=emailParam,
                             phone=12345,
@@ -40,7 +33,6 @@ class ListBookRaw(generics.ListCreateAPIView):
 
             bookUser.save()
 
-            
         # Make a new textbook object
         newTextbook = Textbook(subject=request.POST.get("subject"),
                                class_id=1111111,
@@ -56,22 +48,5 @@ class ListBookRaw(generics.ListCreateAPIView):
         newTextbook.save()
     
         return HttpResponse('success')
-        
-        # How to serialize all the textbooks in the database
-        # Makes sure all the books are stripped of unnecessary
-        # fields, and maybe validated too?
 
-        # Ask for all textbook objects from database, with or without filtering
-        # textbooks = Textbook.objects.all()
-        #textbooks = Textbook.objects.filter(post_id=2)
-
-        #serializedTextbooks = TestSerializer(textbooks, many=True)
-        #return Response(serializedTextbooks.data)
-
-        #postParams = request.POST
-        #return HttpResponse(postParams)
-        #return HttpResponse('success')
-
-        #return render(request, self.template_name)
-  
 
