@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
 import './Home.css';
-import NavigationBar from '../NavigationBar/NavigationBar.js';
+import AdminNav from '../NavigationBar/Admin/AdminNav';
 import { ROUTES } from "../../index.js";
 //import Footer from '../Footer/Footer.js';
 
@@ -22,20 +22,20 @@ class App extends Component {
             <div className="HomeWrapper">
             	<div className="HomeContent">
                     <div className="HomeSection" style={leftStyle}>
-                        <a href={"/" + ROUTES.user_home}>
+                        <a href={"/" + ROUTES.buy}>
                             <div className="HomeTitle">
-                                <div className="HomeTitleText">Browse Textbooks</div>
+                                <div className="HomeTitleText">Buy Textbooks</div>
                             </div>
                         </a>
                     </div>
                     <div className="HomeSection" style={rightStyle}>
-                        <a href={"/" + ROUTES.presell}>
+                        <a href={"/" + ROUTES.admin_home}>
                             <div className="HomeTitle">
-                                <div className="HomeTitleText">Pre-sell Textbooks</div>
+                                <div className="HomeTitleText">Sell Textbooks</div>
                             </div>
                         </a>
                     </div>
-            		<NavigationBar />
+            		<AdminNav />
     	        </div>
             </div>
         );

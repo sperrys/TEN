@@ -20,7 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '71f!(pb*@k)7s7%0_lt(h^qs_*2tkmp_%$&)&9ihd60e8rm#i9'
 WSGI_APPLICATION = 'src.wsgi.application'
 
 INSTALLED_APPS = [
