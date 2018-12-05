@@ -3,22 +3,22 @@ import React, { Component } from 'react';
 import './confirmationPage.css';
 import NavigationBar from './../NavigationBar/NavigationBar.js';
 import Footer        from './../Footer/Footer.js'
+import { Router, Route } from 'react-router-dom';
 //import searchicon from '../img/searchicon.png';
 
-
 class ConfirmationPage extends Component {
-
+    	//const data  = this.props.location
+		
     render() {
         return (
         	<div>
         		<div class="back">
-        			<a href="/sell">&#60; BACK</a>
         		</div>
         		<div class="vertflex">
 			      	<div class="border">
 			      		<div class = "horizflex">
 					      	<div class="vertflex">
-					      		<h3 class="rightalign">Book Title</h3>
+					      		<h3 class="rightalign">color</h3>
 					      		<h3 class="rightalign">Author</h3>
 					      		<h3 class="rightalign">Version</h3>
 					      		<h3 class="rightalign">Condition</h3>
@@ -28,13 +28,15 @@ class ConfirmationPage extends Component {
 					      		<h5 id="booktitle">Intro to advanced descriteid adnc</h5>
 					      		<h5 id="author">Miller, Philip</h5>
 					      		<h5 id="version">5</h5>
-					      		<h5 id="condition">Great</h5>
+					      		<h5 id="condition">great</h5>
 					      		<h5 id="textbookid">1234-567-89</h5>
 					      	</div>
 				        </div>
 		  	        </div>
 		  			<div class="horizflex">
-		  				<button id= "continuebutton"><a href="BuyCart">Continue</a></button>
+		  				<form action="/confirmation">
+    						<input type="submit" value="Submit" />
+						</form>
 		  			</div>
 		  	    </div>
 	        </div>
@@ -43,6 +45,12 @@ class ConfirmationPage extends Component {
 }
 
 class App extends Component {
+	componentWillReceiveProps(nextProps) {
+     if (nextProps.location !== this.props.location) {
+       console.log('navigated to new page! data:', nextProps.location.state);
+     }
+  	}
+
 	render() {
 		return(
 			<div>
@@ -52,7 +60,7 @@ class App extends Component {
 						<ConfirmationPage />
 			 		</div>
                </div>
-            <Footer position="relative" />
+            <Footer position="fixed" />
             </div>
         );
     }

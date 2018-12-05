@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer.js';
 import '../../index.js';
 import { Router, Route } from 'react-router-dom';
 import history from '../../history';
+import { Link } from 'react-router-dom';
 
 class SellPage extends React.Component {
     constructor(props) {
@@ -146,13 +147,14 @@ class SellPage extends React.Component {
             <p>Textbook Exchange Network Sell Page</p>	
            		{this._renderLabels()}
 				{this.getCourseList()}
-				<button onClick = {this.handleClick} type = "button">
-					<Route path ={'/confirmationPage'}/>
-					<a href = "/confirmation"/>
-            	</button>
+				<form action="/confirmation">           
+    				<input type="submit" value="Submit" />
+				</form>
             </form>
+
             </Router>
-             
+            
+           
 
 		);
 
@@ -209,16 +211,26 @@ class Label extends React.Component {
 class App extends React.Component {
 
     render() {
+    	const location = {
+    		pathname: '/confirmation',
+    		state: {
+    			isbn: 1234567
+    		}
+    	}
         return (
             <div>
                 <div className="StudentSellPage">
                     <NavigationBar />
                     <SellPage />
                 </div>
+                <Link to={location}>LINK!</Link>
                 <Footer position="fixed"/>
             </div>
+            
         );
     }
 }
+
+
 
 export default App;
