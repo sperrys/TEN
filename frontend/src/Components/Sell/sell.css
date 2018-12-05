@@ -10,3 +10,13 @@ label {
 .inputField[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
+.vertflex, .horizflex {
+	display: flex;
+	justify-content: center;
+}
+.vertflex{
+	flex-direction: column;
+}
+.horizflex {
+	flex-direction: row;
+}

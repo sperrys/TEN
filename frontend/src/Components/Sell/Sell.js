@@ -8,16 +8,18 @@ class SellPage extends React.Component {
 	super(props);
 
 	this.state = {labelNames:
-		[{name: 'Name',           value: '', type: "text",   placeholder: 'eg. Tony Monacle', 								list: null},
-		 {name: 'ISBN',           value: '', type: "number", placeholder: 'eg. 9781234567890', 								list: null},
-		 {name: 'Subject', 		  value: '', type: "text",   placeholder: 'eg. SPN', 										list: "courses"},
+		[{name: 'Title', value: '', type: "text",   placeholder: 'eg. An Invitation to Spanish (student edition)',          list: null},
+		 {name: 'Author', value: '', type: "text",   placeholder: 'Tony Monoco',                                            list: null},
+ 		 {name: 'ISBN',           value: '', type: "number", placeholder: 'eg. 9781234567890', 								list: null},		 
+         {name: 'Subject', value: '', type: "text",   placeholder: 'eg. SPN', 										        list: "courses"},
+		 {name: 'Edition Number', value: '', type: "number", placeholder: 'eg. 9', 										    list: null},	
 		 {name: 'Class ID',       value: '', type: "number", placeholder: 'eg. 0022', 										list: null},
-		 {name: 'Textbook Title', value: '', type: "text",   placeholder: 'eg. An Invitation to Spanish (student edition)', list: null},
-		 {name: 'Edition Number', value: '', type: "number", placeholder: 'eg. 9', 										    list: null},
 		 {name: 'Price', 		  value: '', type: "number", placeholder: 'eg. 33', 			  							list: null},
 		 {name: 'Email', 		  value: '', type: "text",   placeholder: 'eg. example@mail.com', 						    list: null},
 		 {name: 'Phone Number',   value: '', type: "text",   placeholder: 'eg. 123-456-7890',     							list: null},
 		 {name: 'Venmo ID', 	  value: '', type: "text",   placeholder: 'eg. @jumboKid22',      							list: null}]
+			
+
 	};
 
 
@@ -119,13 +121,37 @@ class SellPage extends React.Component {
 	}
 
 	_renderLabels() {
-
+		var infoLabels = [];
+		var priceLabels = [];
+		for(var i = 0; i < 6; i++){
+			var label = this.state.labelNames[i];
+			infoLabels.push(this.renderLabel(label.name, label.type, label.value, label.placeholder, label.name, label.list));
+		}
+		for(var i = 6; i < 10; i++){
+			var label = this.state.labelNames[i];
+			priceLabels.push(this.renderLabel(label.name, label.type, label.value, label.placeholder, label.name, label.list));
+		}
 		// Map each label object to a label component using renderLabel()
 		return(
-			<div>
-				{this.state.labelNames.map((label, index) =>
-				(this.renderLabel(label.name, label.type, label.value, label.placeholder, label.name, label.list)))
-				}
+			<div className="vertflex">
+				<div className="horizflex">
+					<div className="vertflex">
+						<p>Information Input</p>
+						<p>Please add any information that was not autofilled</p>
+					</div>
+					<div className="vertflex">
+						{infoLabels}
+					</div>
+				</div>
+				<div className="horizflex">
+					<div>
+						<p>Set Price</p>
+						<p>Pick a price to sell your textbook</p>
+					</div>
+					<div className="vertflex">
+						{priceLabels}
+					</div>
+				</div>
 			</div>
 
 		)
