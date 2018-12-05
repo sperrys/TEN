@@ -1,0 +1,44 @@
+env:
+- export DJANGO_SETTINGS_MODULE=src.settings.travis
+notifications:
+  email: false
+jobs:
+  include:
+  - stage: deploy backend to production
+    language: python
+    python:
+    - '3.6'
+    services:
+    - postgresql
+    addons:
+      postgresql: '9.6'
+    before_install:
+    - cd backend
+    install:
+    - pip install -r requirements.txt
+    before_script:
+    - psql -c 'create database travis_ci_test;' -U postgres
+    script: python manage.py test api
+    deploy:
+      provider: heroku
+      app: textbook-exchange-network-back
+      api_key:
+        secure: V/Yf9Mbgdy4CgPf5eRpnx2gw8/1tMGgU6TvkTR9pHT6/7dWOE5TI0pIVBI+WXYov4WybLQffKWCssahNGIWoBrKzm/0K9sCwUl49h6+nsH8VzNiprKAjMyHNc/KLJ0o9BBuYNK3rIMiwbEVP/VKHinxE+5As+lVRiaM865U8TIcRQrZiQh4htgJpd6nfvcOBI0MNj8DVFjGuxgblY7ZuuxohekFnYVOSwGtj+GFCaabq5qDbrALXm87i9+BiiiFV/9BnEgfybtG9Wfl2ph9ueLK+sxrpBtzgfWl8EF8wLtfqVCph7zJi4u0viMCkUqhOHbcD1IP3eIX9ROPu2yZPTX7liXfN1PvE0AzwRgWwbLFRL1bpUi9GlAKCzeyB4L25PE+Ne823nnS+VLja0iGFy1S9dSCTGBZ7h2NDF9VD0B4VlhJO05x/lc8PFwxKZk5MxSG0OiOxtri679Z+fWvrvvcvfqE5VpYUnW/YmGDr8L0wbwS/QOyPXx8IxiEDcY0ZhXu8s++4lc7gB70Nzl2lswAR1ELfoOmvktc4spnwGIGcbdttKTglr44r4VuvyM6KXgTLyH8hX+4TSifgRqhBxcfb5FoLS1iw0/C7DY3f4JynNEegP9ywmfUMHKIiDeKKHAfrXprHoQmtZHNokkLxCl+34PjCTQXFm/ETud9tRNs=
+  - stage: deploy frontend to production
+    language: node_js
+    node_js:
+    - stable
+    cache:
+      directories:
+      - client/node_modules
+    before_install:
+    - cd frontend
+    install:
+    - npm install
+    - npm run build
+    script: echo foo
+    deploy:
+      provider: heroku
+      app: textbook-exchange-network
+      api_key:
+        secure: V/Yf9Mbgdy4CgPf5eRpnx2gw8/1tMGgU6TvkTR9pHT6/7dWOE5TI0pIVBI+WXYov4WybLQffKWCssahNGIWoBrKzm/0K9sCwUl49h6+nsH8VzNiprKAjMyHNc/KLJ0o9BBuYNK3rIMiwbEVP/VKHinxE+5As+lVRiaM865U8TIcRQrZiQh4htgJpd6nfvcOBI0MNj8DVFjGuxgblY7ZuuxohekFnYVOSwGtj+GFCaabq5qDbrALXm87i9+BiiiFV/9BnEgfybtG9Wfl2ph9ueLK+sxrpBtzgfWl8EF8wLtfqVCph7zJi4u0viMCkUqhOHbcD1IP3eIX9ROPu2yZPTX7liXfN1PvE0AzwRgWwbLFRL1bpUi9GlAKCzeyB4L25PE+Ne823nnS+VLja0iGFy1S9dSCTGBZ7h2NDF9VD0B4VlhJO05x/lc8PFwxKZk5MxSG0OiOxtri679Z+fWvrvvcvfqE5VpYUnW/YmGDr8L0wbwS/QOyPXx8IxiEDcY0ZhXu8s++4lc7gB70Nzl2lswAR1ELfoOmvktc4spnwGIGcbdttKTglr44r4VuvyM6KXgTLyH8hX+4TSifgRqhBxcfb5FoLS1iw0/C7DY3f4JynNEegP9ywmfUMHKIiDeKKHAfrXprHoQmtZHNokkLxCl+34PjCTQXFm/ETud9tRNs=

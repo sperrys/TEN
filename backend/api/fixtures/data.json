@@ -1,16 +1,52 @@
 [
-{
+  {
   "model": "api.Textbook",
   "pk": 1,
   "fields": {
-    "post_id"    : 1
+    "post_id"    : 1,
+    "date_added" : "1111-11-11",
+    "subject": "Comp",
+    "price" : 10,
+    "donate": true,
+    "present": false,
+    "isbn": 0,
+    "title":"intro to comp sci",
+    "edition": "4th",
+    "sold":false,
+    "paid_type": 0,
+    "date_sold": "1111-11-11",
+    "seller":"noemail",
+    "buyer" : "noemail"
   }
 },
 {
   "model": "api.Textbook",
   "pk": 2,
   "fields": {
-    "post_id"    : 2
+    "post_id"    : 2,
+    "date_added" : "1111-11-11",
+    "subject": "Comp",
+    "price" : 10,
+    "donate": true,
+    "present": false,
+    "isbn": 0,
+    "title":"intro to comp sci",
+    "edition": "4th",
+    "sold":false,
+    "paid_type": 0,
+    "date_sold": "1111-11-11",
+     "seller":"noemail",
+    "buyer" : "noemail"
   }
+},
+{
+    "model": "api.user",
+    "pk":1,
+    "fields": {
+      "name": "Juliet",  
+      "email" : "noemail", 
+      "phone" : 123,
+      "venmo": "no"
+    }
 }
 ]

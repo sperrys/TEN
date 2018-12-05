@@ -1,0 +1,265 @@
+
+body {
+	background-color: #F2F2F2;
+}
+.BrowseWrapper {
+	position: relative;
+	box-sizing: border-box;
+	padding: 0 20px;
+}
+.BrowseContainer {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-top: 20px;
+	max-width: 620px;
+}
+.SearchContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.SearchInput {
+	border: none;
+}
+.SearchButton {
+	color: #fff;
+	background-color: #3498db;
+	border: none;
+}
+.SearchInput, .SearchButton {
+	padding: 5px 15px;
+	font-size: 16px;
+	margin: 10px 4px;
+	display: block;
+	border-radius: 6px;
+	outline: none;
+}
+.ResultsWrapper {
+	z-index: 0;
+}
+.ResultWrapper {
+	padding: 5px 5px;
+}
+.ResultContainer {
+	border-radius: 10px;
+	background-color: #fff;
+	overflow: hidden;
+}
+.ResultUpper {
+	position: relative;
+	border-bottom: 1px solid #f7f7f7;
+	box-sizing: border-box;
+	padding-bottom: 10px;
+}
+.ResultLower {
+	background-color: #f9f9f9;
+	position: relative;
+}
+.ResultTitle {
+	font-size: 24px;
+	font-family: 'Roboto Slab', sans-serif;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	margin-left: 15px;
+	width: calc(100% - 120px);
+	padding: 0 5px 0 5px;
+	border: none;
+	border-bottom: 1px solid transparent;
+}
+.ResultSubtitle {
+	font-size: 14px;
+	padding: 0px 15px;
+}
+.ResultAuthor {
+	color: #000;
+	display: inline-block;
+	border: none;
+	border-bottom: 1px solid transparent;
+	font-size: 14px;
+	margin: 2px 2px;
+	width: 200px;
+}
+.ResultEdition {
+	color: gray;
+	display: inline-block;
+	border: none;
+	border-bottom: 1px solid transparent;
+	font-size: 14px;
+	margin: 2px 2px;
+	width: 200px;
+}
+.ResultDot{
+	color: #000;
+	display: inline-block;
+	padding: 0 5px 10px 5px;
+}
+.ResultRow {
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+.ResultPrice {
+	font-size: 36px;
+	display: inline-block;
+	margin: 0 15px 10px 15px;
+	border: none;
+	border-bottom: 1px solid transparent;
+	width: 150px;
+	text-align: right;
+	background-color: transparent;
+	margin: 5px 0;
+	outline: none;
+}
+
+
+.InputContainer {
+	position: relative;
+	height: auto;
+	font-size: 16px;
+	z-index: 1;
+}
+.Input {
+	font-size: inherit;
+	display: block;
+	border-radius: 6px;
+	outline: none;
+	border: none;
+}
+.InputSuggestions {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	max-height: 320px;
+	border-radius: 6px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border: 1px solid #f7f7f7;
+	box-shadow: 0 1px 3px #f7f7f7;
+}
+.InputSuggestion {
+	background-color: #fff;
+	padding: 5px 15px;
+	border-bottom: 1px solid #f7f7f7;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.InputSuggestionRegular {
+	color: #000;
+}
+.InputSuggestionBold {
+	color: #000;
+	font-weight: bold;
+}
+
+.EditButton {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	float: right;
+	font-size: 20px;
+	border-radius: 100px;
+	padding: 2px 15px;
+	vertical-align: middle;
+	color: #fff;
+	background-color: #2c3e50;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+.EditIcon {
+	margin-left: 0.7em;
+}
+
+.PopupBackground {
+	position: fixed;
+	z-index: 1000000;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+.PopupWrapper {
+	position: relative;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 620px;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+}
+.PopupTitle {
+	font-size: 24px;
+	font-family: 'Roboto Slab', sans-serif;
+	padding: 10px 20px 0 20px;
+}
+.PopupId {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	padding: 0 20px 10px 20px;
+	color: lightgray;
+	margin-bottom: 10px;
+}
+
+.PopupFields {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.PopupField {
+	flex-shrink: 0;
+	box-sizing: border-box;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+.PopupFieldLabel {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	margin-left: 5px;
+	margin-bottom: 2px;
+}
+.PopupFieldInput {
+	padding: 5px 10px;
+	font-size: 16px;
+	display: inline-block;
+	border-radius: 6px;
+	outline: none;
+	border: 1px solid lightgray;
+}
+.PopupButtons {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+.PopupButton {
+	padding: 5px 15px;
+	font-size: 14px;
+	margin: 10px 4px 0 4px;
+	display: block;
+	border-radius: 6px;
+	outline: none;
+	cursor: pointer;
+}
+.PopupCancel {
+	background-color: #fff;
+	color: #000;
+	border: 1px solid lightgray;
+}
+.PopupDelete {
+	background-color: #e74c3c;
+	color: #fff;
+	border: none;
+}
+.PopupSave {
+	background-color: #2ecc71;
+	color: #fff;
+	border: none;
+}
