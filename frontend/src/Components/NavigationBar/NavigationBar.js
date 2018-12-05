@@ -38,7 +38,7 @@ class NavigationBar extends Component {
                 <NavigationBarItem
                 	float="right"
                 	text="Browse"
-                	link={"/" + ROUTES.browse}
+                	link={"/" + ROUTES.user_home}
                 />
             </div>
         );
