@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './Components/Home/Home';
-import About from './Components/About/About';
-import AdminLogin from './Components/AdminLogin/AdminLogin';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import history from './history';
 
+import AdminLogin from './Components/AdminLogin/AdminLogin';
 import Home from './Components/Home/Home';
 import AdminHome from './Components/Home/AdminHome';
 import About from './Components/About/About';
@@ -25,7 +23,8 @@ export const ROUTES = {
 	presell: 'presell',
 	browse: 'browse',
 	cart: 'cart',
-	addtocart: 'addtocart'
+	addtocart: 'addtocart',
+	admin_login: 'admin-login'
 }
 
 ReactDOM.render(
@@ -53,6 +52,9 @@ ReactDOM.render(
 	    </Router>
 		<Router>
 	    	<Route exact path={"/" + ROUTES.addtocart} component={BuyCart}/>
+	    </Router>
+		<Router>
+	    	<Route exact path={"/" + ROUTES.admin_login} component={AdminLogin}/>
 	    </Router>
     </div>, document.getElementById('root'));
 registerServiceWorker();
