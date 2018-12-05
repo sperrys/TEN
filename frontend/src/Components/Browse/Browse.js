@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../Browse/Browse.css';
-import NavigationBar from '../NavigationBar/NavigationBar.js';
+import AdminNav from '../NavigationBar/Admin/AdminNav.js';
 import Footer from '../Footer/Footer.js';
 
 class Result extends Component {
@@ -239,7 +239,7 @@ class Browse extends Component {
     render() {
         return (
             <div>
-                <NavigationBar />
+                <AdminNav />
                 <BrowseContent />
                 <Footer position="fixed" />
             </div>

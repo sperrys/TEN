@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './AdminLogin.css';
 import history from '../../history';
 import logo from '../../assets/logo.png';
-
+import { ROUTES } from '../../index.js'
 
 class AdminLogin extends Component {
 	constructor(props) {
@@ -19,7 +19,7 @@ class AdminLogin extends Component {
 
   handleSubmit(event) {
     if(this.state.value === "jumbo"){
-    	history.push('/AdminHome');
+    	history.push("/" + ROUTES.admin_home);
     	window.location.reload()
     }
     event.preventDefault();
@@ -44,21 +44,23 @@ class AdminLogin extends Component {
 class App extends Component{
 	render() {
 		return (
-			<div className="AdminLoginTextContainer">
-					<p className="AdminLoginP1">
-								Please login using the administrators password
-					</p>
-					<p className="AdminLoginP2">
-								If you have forgotten the password, please ask another <br />administrator for the passcode
-					</p>
-					<p className="AdminLoginP3">
-								Passcode:
-					</p>
-					<p className="AdminLoginP4">
-								Copyright TEN 2018
-					</p>
-					<AdminLogin/>
-					<img src={logo} id="LogoStyling" alt="logo-style"/>
+			<div className="AdminLoginContainer">
+				<div className="AdminLoginTextContainer">
+						<p className="AdminLoginP1">
+									Please login using the administrators password
+						</p>
+						<p className="AdminLoginP2">
+									If you have forgotten the password, please ask another <br />administrator for the passcode
+						</p>
+						<p className="AdminLoginP3">
+									Passcode:
+						</p>
+						<p className="AdminLoginP4">
+									Copyright TEN 2018
+						</p>
+						<AdminLogin/>
+						<img src={logo} id="LogoStyling" alt="logo-style"/>
+				</div>
 			</div>
 		);
 	}
