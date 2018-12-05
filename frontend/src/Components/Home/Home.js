@@ -22,7 +22,7 @@ class App extends Component {
             <div className="HomeWrapper">
             	<div className="HomeContent">
                     <div className="HomeSection" style={leftStyle}>
-                        <a href={"/" + ROUTES.browse}>
+                        <a href={"/" + ROUTES.user_home}>
                             <div className="HomeTitle">
                                 <div className="HomeTitleText">Browse Textbooks</div>
                             </div>
