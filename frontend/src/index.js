@@ -6,37 +6,53 @@ import About from './Components/About/About';
 import AdminLogin from './Components/AdminLogin/AdminLogin';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import history from './history'; 
+import history from './history';
 
-import UserHome from './Components/Home/UserHome/UserHome';
-import AdminHome from './Components/Home/AdminHome/AdminHome';
+import Home from './Components/Home/Home';
+import AdminHome from './Components/Home/AdminHome';
+import About from './Components/About/About';
 import PreSell from './Components/Sell/Sell';
+import Browse from './Components/Browse/Browse';
 import BuyFind from './Components/Buy/BuyFind/BuyFind';
 import BuyCart from './Components/Buy/BuyCart/BuyCart';
 import BuyAddtoCart from './Components/Buy/BuyAddtoCart/BuyAddtoCart';
 
-export const USER_HOME_ROUTE = "";
-export const ADMIN_HOME_ROUTE = "adminhome";
-export const ABOUT_ROUTE = "about";
-export const PRESELL_ROUTE = "presell";
-export const BUY_FIND_ROUTE = "buy";
-export const BUY_CART_ROUTE = "cart";
-export const BUY_ADD_CART_ROUTE = "addtocart";
-export const VOLUNTEER_LOGIN = "adminlogin";
+
+export const ROUTES = {
+	user_home: '',
+	admin_home: 'admin-home',
+	about: 'about',
+	presell: 'presell',
+	browse: 'browse',
+	cart: 'cart',
+	addtocart: 'addtocart'
+}
 
 ReactDOM.render(
 	<div className="BodyWrapper">
-		<Router history={history}>
-		<div>
-	      <Route exact path={"/" + USER_HOME_ROUTE} component={UserHome}/>
-	      <Route exact path={"/" + ADMIN_HOME_ROUTE} component={AdminHome}/>
-	      <Route exact path={"/" + ABOUT_ROUTE} component={About}/>
-	      <Route exact path={"/" + PRESELL_ROUTE} component={PreSell}/>
-	      <Route exact path={"/" + BUY_FIND_ROUTE} component={BuyFind}/>
-	      <Route exact path={"/" + BUY_ADD_CART_ROUTE} component={BuyAddtoCart}/>
-	      <Route exact path={"/" + BUY_CART_ROUTE} component={BuyCart}/>
-	      <Route exact path={"/" + VOLUNTEER_LOGIN} component={AdminLogin}/>
-	    </div>
+	    <Router>
+	    	<Route exact path={"/" + ROUTES.user_home} component={Home}/>
 	    </Router>
-    </div> ,document.getElementById('root'));
+		<Router>
+	    	<Route exact path={"/" + ROUTES.admin_home} component={AdminHome}/>
+	    </Router>
+	    <Router>
+	    	<Route exact path={"/" + ROUTES.about} component={About}/>
+	    </Router>
+		<Router>
+	    	<Route exact path={"/" + ROUTES.presell} component={PreSell}/>
+	    </Router>
+		<Router>
+	    	<Route exact path={"/" + ROUTES.browse} component={Browse}/>
+	    </Router>
+		<Router>
+	    	<Route exact path={"/" + ROUTES.buy} component={BuyFind}/>
+	    </Router>
+		<Router>
+	    	<Route exact path={"/" + ROUTES.cart} component={BuyAddtoCart}/>
+	    </Router>
+		<Router>
+	    	<Route exact path={"/" + ROUTES.addtocart} component={BuyCart}/>
+	    </Router>
+    </div>, document.getElementById('root'));
 registerServiceWorker();
