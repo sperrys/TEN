@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import './AdminLogin.css';
-import NavigationBar from '../NavigationBar/NavigationBar.js';
-import Footer from '../Footer/Footer.js'
 import history from '../../history';
 import logo from '../../assets/logo.png';
 
@@ -61,8 +58,8 @@ class App extends Component{
 								Copyright TEN 2018
 					</p>
 					<AdminLogin/>
-					<img src={logo} id="LogoStyling"/>
-			</div>	
+					<img src={logo} id="LogoStyling" alt="logo-style"/>
+			</div>
 		);
 	}
 }
