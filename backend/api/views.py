@@ -54,6 +54,8 @@ class UserGet(generics.RetrieveAPIView):
     lookup_field = "email"
     serializer_class = userSerializer
 
+    # a GET request at localhost:8000/api/user/noemail will get the user with email "noemail"
+
 
 
 
