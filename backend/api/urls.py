@@ -20,4 +20,6 @@ from .views import *
 
 urlpatterns = [
     path("browse/", ListBookRaw.as_view(), name="browse-list"),
+    path("user/<str:email>/", UserGet.as_view(), name="user-single")
+    
 ]

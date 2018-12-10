@@ -49,4 +49,11 @@ class ListBookRaw(generics.ListCreateAPIView):
     
         return HttpResponse('success')
 
+class UserGet(generics.RetrieveAPIView):
+    queryset = user.objects.all()
+    lookup_field = "email"
+    serializer_class = userSerializer
+
+
+
 
