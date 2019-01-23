@@ -9,7 +9,7 @@ import Home from './Components/Home/Home';
 import AdminHome from './Components/Home/AdminHome';
 import About from './Components/About/About';
 import PreSell from './Components/Sell/Sell';
-import BrowseEdit from './Components/Browse/BrowseEdit';
+import BrowseEdit from './Components/BrowseEdit/BrowseEdit';
 import BuyFind from './Components/Buy/BuyFind/BuyFind';
 import BuyCart from './Components/Buy/BuyCart/BuyCart';
 import BuyAddtoCart from './Components/Buy/BuyAddtoCart/BuyAddtoCart';
