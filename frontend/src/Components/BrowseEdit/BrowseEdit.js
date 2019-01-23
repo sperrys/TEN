@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import '../Browse/BrowseEdit.css';
+import '../BrowseEdit/BrowseEdit.css';
 import AdminNav from '../NavigationBar/Admin/AdminNav.js';
 import Footer from '../Footer/Footer.js';
 
@@ -235,7 +235,7 @@ class BrowseContent extends Component {
     }
 }
 
-class Browse extends Component {
+class BrowseEdit extends Component {
     render() {
         return (
             <div>
@@ -247,4 +247,4 @@ class Browse extends Component {
     }
 }
 
-export default Browse;
+export default BrowseEdit;
