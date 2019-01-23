@@ -9,6 +9,7 @@ import Home from './Components/Home/Home';
 import AdminHome from './Components/Home/AdminHome';
 import About from './Components/About/About';
 import PreSell from './Components/Sell/Sell';
+import Browse from './Components/Browse/Browse';
 import BrowseEdit from './Components/BrowseEdit/BrowseEdit';
 import BuyFind from './Components/Buy/BuyFind/BuyFind';
 import BuyCart from './Components/Buy/BuyCart/BuyCart';
@@ -20,7 +21,8 @@ export const ROUTES = {
 	admin_home: 'admin-home',
 	about: 'about',
 	presell: 'presell',
-	browse_edit: 'browse-edit',
+	browse: 'browse',
+	browse_edit: 'database',
 	cart: 'cart',
 	addtocart: 'addtocart',
 	admin_login: 'admin-login'
@@ -39,6 +41,9 @@ ReactDOM.render(
 	    </Router>
 		<Router>
 	    	<Route exact path={"/" + ROUTES.presell} component={PreSell}/>
+	    </Router>
+		<Router>
+	    	<Route exact path={"/" + ROUTES.browse} component={Browse}/>
 	    </Router>
 		<Router>
 	    	<Route exact path={"/" + ROUTES.browse_edit} component={BrowseEdit}/>

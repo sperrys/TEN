@@ -1,17 +1,54 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import '../Browse/Browse.css';
-import NavigationBar from '../NavigationBar/NavigationBar.js';
+import '../BrowseEdit/BrowseEdit.css';
+import AdminNav from '../NavigationBar/Admin/AdminNav.js';
 import Footer from '../Footer/Footer.js';
 
 class Result extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            editing: false
+        }
+        this.editButton = React.createRef();
         this.resultTitle = React.createRef();
         this.resultSubtitle = React.createRef();
         this.resultEdition = React.createRef();
         this.resultPrice = React.createRef();
+        this.toggleEditing = this.toggleEditing.bind(this);
+    }
+
+    toggleEditing() {
+        const editing = !this.state.editing;
+        this.setState({
+            editing: editing
+        });
+
+        const inputs = ['resultTitle', 'resultSubtitle', 'resultEdition', 'resultPrice'];
+
+        if (editing) {
+            this.editButton.current.innerHTML = 'Save';
+            this.editButton.current.style.backgroundColor = '#2ecc71';
+
+
+
+            for (let i = 0; i < inputs.length; i++) {
+                let el = this[inputs[i]];
+                el.current.style.borderBottom = '1px dashed lightgray';
+                el.current.readOnly = false;
+            }
+        }
+        else {
+            this.editButton.current.innerHTML = 'Edit';
+            this.editButton.current.style.backgroundColor = '#2c3e50';
+
+            for (let i = 0; i < inputs.length; i++) {
+                let el = this[inputs[i]];
+                el.current.style.borderBottom = '1px dashed transparent';
+                el.current.readOnly = true;
+            }
+        }
     }
 
     render() {
@@ -20,6 +57,7 @@ class Result extends Component {
                 className="ResultWrapper"
                 onSubmit={(e) => {
                     e.preventDefault();
+                    this.toggleEditing();
                 }}
             >
                 <div className="ResultContainer">
@@ -29,6 +67,12 @@ class Result extends Component {
                             ref={this.resultTitle}
                             readOnly={true}
                         />
+                        <button
+                            className="EditButton"
+                            ref={this.editButton}
+                        >
+                            Edit
+                        </button>
                         <div className="ResultSubtitle">
                             <input
                                 className="ResultAuthor"
@@ -191,11 +235,11 @@ class BrowseContent extends Component {
     }
 }
 
-class Browse extends Component {
+class BrowseEdit extends Component {
     render() {
         return (
             <div>
-                <NavigationBar />
+                <AdminNav />
                 <BrowseContent />
                 <Footer position="fixed" />
             </div>
@@ -203,4 +247,4 @@ class Browse extends Component {
     }
 }
 
-export default Browse;
+export default BrowseEdit;
