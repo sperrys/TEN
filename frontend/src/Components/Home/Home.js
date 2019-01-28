@@ -28,13 +28,6 @@ class App extends Component {
                             </div>
                         </a>
                     </div>
-                    <div className="HomeSection" style={rightStyle}>
-                        <a href={"/" + ROUTES.presell}>
-                            <div className="HomeTitle">
-                                <div className="HomeTitleText">Pre-sell Textbooks</div>
-                            </div>
-                        </a>
-                    </div>
             		<NavigationBar />
     	        </div>
             </div>

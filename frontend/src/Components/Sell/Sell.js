@@ -136,7 +136,6 @@ class SellPage extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-            <p>Textbook Exchange Network Sell Page</p>
 				{this._renderLabels()}
 				{this.getCourseList()}
             <input type="submit" value="Submit" />

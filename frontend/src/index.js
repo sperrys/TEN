@@ -8,7 +8,7 @@ import AdminLogin from './Components/AdminLogin/AdminLogin';
 import Home from './Components/Home/Home';
 import AdminHome from './Components/Home/AdminHome';
 import About from './Components/About/About';
-import PreSell from './Components/Sell/Sell';
+import Sell from './Components/Sell/Sell';
 import Browse from './Components/Browse/Browse';
 import BrowseEdit from './Components/BrowseEdit/BrowseEdit';
 import BuyFind from './Components/Buy/BuyFind/BuyFind';
@@ -20,7 +20,7 @@ export const ROUTES = {
 	user_home: '',
 	admin_home: 'admin-home',
 	about: 'about',
-	presell: 'presell',
+	sell: 'sell',
 	browse: 'browse',
 	browse_edit: 'database',
 	cart: 'cart',
@@ -40,7 +40,7 @@ ReactDOM.render(
 	    	<Route exact path={"/" + ROUTES.about} component={About}/>
 	    </Router>
 		<Router>
-	    	<Route exact path={"/" + ROUTES.presell} component={PreSell}/>
+	    	<Route exact path={"/" + ROUTES.sell} component={Sell}/>
 	    </Router>
 		<Router>
 	    	<Route exact path={"/" + ROUTES.browse} component={Browse}/>

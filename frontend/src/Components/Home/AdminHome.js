@@ -29,7 +29,7 @@ class App extends Component {
                         </a>
                     </div>
                     <div className="HomeSection" style={rightStyle}>
-                        <a href={"/" + ROUTES.admin_home}>
+                        <a href={"/" + ROUTES.sell}>
                             <div className="HomeTitle">
                                 <div className="HomeTitleText">Sell Textbooks</div>
                             </div>
