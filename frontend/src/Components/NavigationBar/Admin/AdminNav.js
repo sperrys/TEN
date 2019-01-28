@@ -28,7 +28,7 @@ class NavigationBar extends Component {
                 <NavigationBarItem
                 	float="right"
                     text="Sell"
-                    link={"/" + ROUTES.admin_home}
+                    link={"/" + ROUTES.sell}
                 />
                 <NavigationBarItem
                 	float="right"

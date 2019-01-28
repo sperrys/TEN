@@ -32,11 +32,6 @@ class NavigationBar extends Component {
                 />
                 <NavigationBarItem
                 	float="right"
-                    text="Pre-sell"
-                    link={"/" + ROUTES.presell}
-                />
-                <NavigationBarItem
-                	float="right"
                 	text="Browse"
                 	link={"/" + ROUTES.browse}
                 />

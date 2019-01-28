@@ -1,6 +1,6 @@
 import React from 'react';
 import './sell.css';
-import NavigationBar from '../NavigationBar/NavigationBar.js';
+import NavigationBar from '../NavigationBar/Admin/AdminNav.js';
 import Footer from '../Footer/Footer.js';
 
 class SellPage extends React.Component {
